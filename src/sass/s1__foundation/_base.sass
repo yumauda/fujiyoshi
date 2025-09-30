@@ -1,0 +1,57 @@
+@charset 'utf-8'
+@use '../s0__global' as *
+
+html
+  // ----------
+  font-size: min(1.25vw, 16px) // rem基準
+  @media screen and (max-width: $breakpoint) and (orientation: portrait)
+    font-size: min(3.6vw, 14px) // rem基準
+  // ----------
+  scroll-behavior: smooth
+
+html,body
+  // 画面全体のスクロール制御 ----------
+  &.is-fixed
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    overflow: hidden
+  // ----------
+
+body
+  position: relative
+  font-family: $gothic
+  font-weight: 500
+  font-feature-settings: "palt"
+  line-height: 1.8
+  color: $bk
+
+  &::selection
+    background-color: $gy
+    color: $wh
+
+  a
+    text-decoration: none
+    color: $bk
+  img
+    width: 100%
+  h1,h2,h3,h4,h5,h6
+    font-size: unset
+    font-weight: unset
+    margin: 0
+    width: 100%
+  p
+    margin: 0
+  ul,ol
+    padding: 0
+    margin: 0
+    li
+      list-style: none
+  button
+    cursor: pointer
+    border: unset
+    background: unset
+    padding: 0
+  figure
+    margin: 0

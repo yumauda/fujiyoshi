@@ -1,0 +1,19 @@
+@charset 'utf-8'
+@use '../s0__global' as *
+
+// br ----------
+
+span.u-inline-bl
+    display: inline-block
+br.u-br--sp
+    display: none
+    @media screen and (max-width: $breakpoint) and (orientation: portrait)
+        display: block
+br.u-br--pc
+    display: block
+    @media screen and (max-width: $breakpoint) and (orientation: portrait)
+        display: none
+
+
+
+

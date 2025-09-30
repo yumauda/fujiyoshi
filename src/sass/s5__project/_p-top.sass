@@ -1,0 +1,567 @@
+@charset 'utf-8'
+@use '../s0__global' as *
+
+.p-top
+    .l-section__wrap
+        padding: rem(88) 0
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            padding: rem(40) 0
+    &__opening
+        position: fixed
+        width: 100vw
+        height: 100dvh
+        overflow: hidden
+        transform: translateY(0%)
+        z-index: $z-index__opening
+        touch-action: none  // 指のドラッグでのスクロール抑止
+        overscroll-behavior: contain  // バウンスやプルリフ防止
+        &__wrap
+            width: 100vw
+            height: 100vh
+            background-color: $wh
+            display: flex
+            justify-content: center
+            align-items: center
+    &__fv
+        &__wrap
+            width: 100vw
+            height: 100dvh
+            display: flex
+            justify-content: center
+            align-items: center
+        &__outer
+            display: grid
+            grid-template-columns: repeat(4,1fr)
+            gap: rem(20)
+            padding-top: rem(112)
+            width: 85%
+            max-width: rem(1200)
+            margin: 0 auto
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                grid-template-columns: repeat(2,1fr)
+                padding-top: rem(96)
+                width: calc(100% - rem(24)*2)
+                margin: 0 auto
+        &__inner
+            aspect-ratio: 34 / 72
+            border-radius: rem(30)
+            overflow: hidden
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                aspect-ratio: 9 / 16
+                border-radius: rem(20)
+            &:nth-of-type(2n)
+                margin-top: rem(48)
+                @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                    margin: 0
+
+    &__intro
+        position: relative
+        margin-top: rem(-80)
+        padding-top: rem(80)
+        height: 100vh
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            margin-top: rem(-40)
+            padding-top: rem(40)
+        &::before
+            position: absolute
+            content: ''
+            top: 0
+            left: 0
+            width: 100vw
+            height: 100%
+            background: linear-gradient(0deg, rgba(255, 255, 255, 1) 45%, rgba(255, 255, 255, 0) 100%)
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                background: linear-gradient(0deg,rgba(255, 255, 255, 1) 45%, rgba(255, 255, 255, .7) 85%, rgba(255, 255, 255, 0) 100%)
+        &__wrap
+            display: flex
+            justify-content: space-between
+            padding-top: rem(120)
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                flex-direction: column
+                padding-top: rem(96)
+        &__txt-gr
+            display: flex
+            flex-direction: column
+            gap: rem(24)
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                padding-left: unset
+                margin: 0 auto
+            span.-lg
+                font-size: rem(22)
+                font-weight: bold
+                line-height: 2.5
+                @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                    font-size: rem(22)
+            span.-bl
+                color: $bl
+            span.-r-bl
+                color: $r-bl
+            p
+                line-height: 2
+                font-size: rem(16)
+        &__excl
+            position: relative
+            width: rem(400)
+            height: rem(528)
+            margin-top: rem(80)
+            right: 0
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                position: absolute
+                top: rem(400)
+                right: rem(20)
+                width: calc(rem(400) * .4)
+                height: calc(rem(528) * .6)
+                margin: 0
+            &__bl
+                width: rem(160)
+                position: absolute
+                top: 0
+                right: 25%
+                @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                    width: rem(96)
+            &__gn
+                width: rem(136)
+                position: absolute
+                top: 50%
+                right: 0
+                @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                    width: rem(88)
+            &__yl
+                width: rem(160)
+                position: absolute
+                bottom: 0
+                right: 55%
+                @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                    width: rem(104)
+    &__envr
+        background-color: $wh
+        .l-section__wrap
+            padding-bottom: 0
+        &__outer
+            position: relative
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                padding-top: rem(320)
+                padding-bottom: rem(360)
+
+        &__txt-gr
+            padding-top: rem(240)
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                padding: 0
+        &__ttl
+            font-size: rem(36)
+            font-weight: bold
+            margin-bottom: rem(56)
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                font-size: rem(32)
+            p,span
+                display: inline-block
+            span.-dot
+                position: relative
+                &::before
+                    position: absolute
+                    content: ''
+                    top: rem(-16)
+                    left: 50%
+                    transform: translateX(-50%)
+                    width: rem(12)
+                    aspect-ratio: 1/1
+                    border-radius: 100vh
+                    @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                        width: rem(10)
+                        top: rem(-12)
+            span.-gn::before
+                background-color: #26CEA2
+            span.-yl::before
+                background-color: #E6D25F
+        &__lead
+            margin-bottom: rem(80)
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                margin-bottom: rem(56)
+        &__img-gr
+            position: absolute
+            top: 0
+            right: 0
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                display: contents
+        &__img
+            position: absolute
+            border-radius: rem(30)
+            overflow: hidden
+            &.-num__01
+                width: calc(rem(360) * .8)
+                top: 0
+                right: 0
+                @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                    width: rem(184)
+            &.-num__02
+                width: calc(rem(180) * .8)
+                top: calc(rem(140) * .8)
+                right: calc(rem(400) * .8)
+                @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                    width: rem(144)
+                    top: rem(88)
+                    right: rem(204)
+            &.-num__03
+                width: calc(rem(220) * .8)
+                top: calc(rem(400) * .8)
+                right: calc(rem(240) * .8)
+                @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                    width: rem(184)
+                    top: unset
+                    right: unset
+                    left: 0
+                    bottom: rem(88)
+            &.-num__04
+                width: calc(rem(190) * .8)
+                top: calc(rem(660) * .8)
+                right: calc(rem(112) * .8)
+                @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                    width: rem(144)
+                    top: unset
+                    right: unset
+                    left: rem(204)
+                    bottom: 0
+        &__excl-gr
+            position: relative
+            height: rem(440)
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                height: rem(288)
+        &__excl
+            position: absolute
+            &.-yl
+                width: rem(120)
+                top: rem(80)
+                left: rem(104)
+                @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                    width: rem(88)
+                    top: rem(56)
+                    left: rem(144)
+            &.-gn
+                width: rem(120)
+                top: rem(256)
+                left: rem(256)
+                @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                    width: rem(88)
+                    top: rem(160)
+                    left: rem(240)
+    &__work
+        .l-section__wrap
+            padding-bottom: 0
+        .c-txt__sec-link
+            margin-bottom: rem(56)
+        .c-txt__sec-link__btn.-work
+            width: rem(24)
+        &__customer
+            position: relative
+            display: flex
+            justify-content: center
+            align-items: center
+            background-color: #EFE3A2
+            border-radius: rem(20)
+            height: rem(64)
+            margin-bottom: rem(32)
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                flex-direction: column
+                align-items: start
+                height: unset
+                padding: rem(20)
+            &::before,&::after
+                position: absolute
+                content: ''
+                width: rem(44)
+                aspect-ratio: 38 / 33
+                background-repeat: no-repeat
+                background-size: contain
+                bottom: 0
+                transform: translateY(70%)
+            &::before
+                left: rem(280)
+                background-image: url('/recruit-site/assets/img/top/ico-work__arrow__01.webp')
+            &::after
+                right: rem(280)
+                background-image: url('/recruit-site/assets/img/top/ico-work__arrow__02.webp')
+            &__tag
+                position: absolute
+                top: 50%
+                left: rem(40)
+                transform: translateY(-50%)
+                background-color: #DB6703
+                color: $wh
+                font-size: rem(14)
+                padding: 0 rem(28)
+                border-radius: 100vh
+                @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                    position: static
+                    transform: unset
+                    margin-bottom: rem(8)
+            &__txt
+                font-size: rem(16)
+                font-weight: bold
+        &__solution
+            border: 1px solid #CECECE
+            border-radius: rem(20)
+            padding: 0 rem(40) rem(56)
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                padding: 0 rem(20) rem(32)
+            &__ttl
+                text-transform: uppercase
+                font-family: $en
+                font-weight: bold
+                color: $r-bl
+                font-size: rem(26)
+                letter-spacing: rem(1.3)
+                text-align: center
+                padding: rem(24) 0
+                @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                    font-size: rem(24)
+                    padding: rem(40) 0 rem(24)
+                    line-height: 1.2
+                span
+                    color: $bl
+            &__outer
+                display: flex
+                justify-content: center
+                align-items: stretch
+                gap: rem(32)
+                margin-bottom: rem(40)
+                @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                    flex-direction: column
+                    gap: rem(48)
+            &__box
+                position: relative
+                border-radius: rem(16)
+                cursor: pointer
+                height: 100%
+                &.-bl
+                    background-color: #c5e9f8
+                &.-pk
+                    background-color: #fee5f8
+                &.-gn
+                    background-color: #d1f4db
+                &.-gy
+                    background-color: #F2F2F2
+                &__ttl
+                    position: relative
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    gap: rem(16)
+                    font-size: rem(20)
+                    font-weight: bold
+                    padding: rem(16) 0
+                    .c-txt__sec-link__btn
+                        position: absolute
+                        right: rem(24)
+                        background-color: $r-bl
+                &__inner
+                    position: relative
+                    overflow: hidden
+                    border-radius: 0 0 rem(16) rem(16)
+                &__img
+                    @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                        overflow: hidden
+                        aspect-ratio: 1/1
+                    &::after
+                        opacity: 0
+                        visibility: hidden
+                        position: absolute
+                        top: 0
+                        left: 0
+                        content: ''
+                        width: 100%
+                        height: 100%
+                        background-color: rgba(0, 67, 110,.4)
+                        transition: .3s
+                    &__hov-txt
+                        opacity: 0
+                        visibility: hidden
+                        position: absolute
+                        top: 50%
+                        transform: translateY(-50%)
+                        width: 100%
+                        text-align: center
+                        font-size: rem(20)
+                        font-weight: bold
+                        color: $wh
+                        z-index: 5
+                        transition: .3s
+                        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                            opacity: 1
+                            visibility: visible
+                            position: unset
+                            transform: unset
+                            font-size: rem(16)
+                            color: $bk
+                            line-height: 1.5
+                            padding: rem(16) 0 rem(32)
+                &__tag
+                    position: absolute
+                    bottom: 0
+                    left: 50%
+                    transform: translate(-50%,50%)
+                    width: rem(256)
+                    background-color: $bl
+                    color: $wh
+                    padding: rem(2) 0
+                    text-align: center
+                    border-radius: 100vh
+                    font-size: rem(14)
+            &__box.-office
+                display: flex
+                justify-content: center
+                align-items: center
+                width: rem(100)
+                .p-top__work__solution__box__ttl
+                    writing-mode: vertical-rl
+                    display: block
+                    letter-spacing: rem(2)
+                    font-size: rem(20)
+                    span
+                        text-combine-upright: all
+            &__box.-support
+                position: relative
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 100%
+                height: rem(80)
+                .p-top__work__solution__box__ttl
+                    font-size: rem(16)
+                    margin-top: rem(-8)
+            &__box:hover
+                .p-top__work__solution__box__img
+                    &::after
+                        opacity: 1
+                        visibility: visible
+                        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                            opacity: 0
+                            visibility: hidden
+                .p-top__work__solution__box__img__hov-txt
+                    opacity: 1
+                    visibility: visible
+        &__excl-gr
+            position: relative
+            height: rem(240)
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                height: rem(200)
+        &__excl
+            position: absolute
+            top: rem(88)
+            left: rem(240)
+            width: rem(104)
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                top: rem(40)
+                left: rem(80)
+                width: rem(80)
+    &__company
+        .c-txt__sec-link
+            margin-bottom: rem(56)
+        &__outer
+            display: grid
+            grid-template-columns: repeat(2,1fr)
+            gap: rem(32)
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                grid-template-columns: repeat(1,1fr)
+                gap: rem(20)
+        &__box
+            display: flex
+            justify-content: center
+            align-items: center
+            background-color: #E4F3FA
+            border-radius: rem(20)
+            padding: 0 rem(32)
+            height: rem(208)
+            transition: .3s
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                padding: rem(20)
+                height: unset
+                align-items: start
+        &__inner
+            display: flex
+            align-items: center
+            gap: rem(16)
+            width: 100%
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                flex-direction: column
+                align-items: center
+                width: 100%
+        &__txt-gr
+            flex: 1
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                width: 100%
+        &__ttl
+            display: flex
+            align-items: center
+            gap: rem(12)
+            font-weight: bold
+            margin-bottom: rem(16)
+            font-size: rem(20)
+            transition: .3s
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                text-align: center
+            .c-txt__sec-link__btn
+                width: rem(22)
+                background-color: $r-bl
+        &__txt
+            font-size: rem(15)
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                font-size: rem(16)
+        &__img
+            width: rem(80)
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                width: rem(96)
+        &__img.-number
+            width: rem(96)
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                width: rem(104)
+        &__box:hover
+            background-color: rgba(34, 184, 237, .7)
+            .p-top__company__img
+                animation-name: bounce-sm
+                animation-duration: .3s
+                animation-timing-function: ease-in-out
+                animation-fill-mode: both
+                @keyframes bounce-sm
+                    0%
+                        transform: translateY(0%)
+                    70%
+                        transform: translateY(-15%)
+                    100%
+                        transform: translateY(0%)
+
+    &__philosophy
+        .l-container--800
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                width: 85%
+                margin: 0 auto
+        &__ttl
+            width: 100%
+            padding: rem(4) 0
+            padding-left: rem(24)
+            background-color: $bl
+            color: $wh
+            border-radius: 100vh
+            margin-bottom: rem(56)
+        &__outer
+            display: flex
+            gap: rem(40)
+            align-items: center
+            padding: 0 rem(40)
+            margin-bottom: rem(80)
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                flex-direction: column
+                padding: 0
+                margin-bottom: rem(48)
+        &__logo
+            width: rem(200)
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                width: rem(200)
+        &__txt
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                padding: 0 rem(20)
+        &__excl
+            width: rem(200)
+            margin: 0 auto
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                width: rem(120)
+                margin-bottom: rem(80)

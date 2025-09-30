@@ -1,0 +1,89 @@
+@charset 'utf-8'
+@use '../s0__global' as *
+
+.l-footer
+    &__wrap
+        padding-bottom: rem(24)
+    &__logo
+        display: block
+        width: rem(320)
+        margin-bottom: rem(40)
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            width: rem(240)
+    &__outer
+        display: flex
+        justify-content: space-between
+        margin-bottom: rem(80)
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            flex-direction: column
+            margin-bottom: rem(32)
+    &__menu
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            margin-bottom: rem(48)
+        &__outer
+            display: flex
+            gap: rem(48)
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                gap: 0
+                justify-content: space-between
+                flex-wrap: wrap
+        &__inner
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                width: 45%
+        &__item
+            position: relative
+            display: block
+            padding-left: rem(16)
+            font-size: rem(14)
+            line-height: 2
+            transition: .3s
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                line-height: 2.5
+            &::before
+                position: absolute
+                content: ''
+                left: 0
+                top: 50%
+                transform: translateY(-50%)
+                width: rem(12)
+                aspect-ratio: 1 / 1
+                background-repeat: no-repeat
+                background-size: contain
+            &:hover
+                color: $r_bl
+        &__item.-ttl
+            font-weight: bold
+            margin-bottom: rem(12)
+            &::before
+                background-image: url('/recruit-site/assets/img/top/ico-cmn__list-arrow__bl.webp')
+        &__item.-deta
+            &::before
+                background-image: url('/recruit-site/assets/img/top/ico-cmn__list-arrow__r-bl.webp')
+    &__bnner
+        &__outer
+            display: flex
+            gap: rem(40)
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                gap: rem(16)
+        &__inner
+            width: rem(240)
+        &__ttl
+            color: $wh
+            font-size: rem(14)
+            margin-bottom: rem(16)
+            padding: rem(4) 0
+            width: 100%
+            text-align: center
+        &__inner.-num__01
+            .l-footer__bnner__ttl
+                background-color: $r-bl
+            .l-footer__bnner__img
+                border: 1px solid $r-bl
+        &__inner.-num__02
+            .l-footer__bnner__ttl
+                background-color: $bl
+            .l-footer__bnner__img
+                border: 1px solid $bl
+    &__copy
+        text-align: center
+        font-size: rem(10)

@@ -1,0 +1,10 @@
+@charset 'utf-8'
+@use '../s0__global' as *
+
+.l-main
+    padding: rem(0) rem(80)
+    padding-top: $header-ht
+    overflow: hidden
+    @media screen and (max-width: $breakpoint) and (orientation: portrait)
+        padding: rem(0) rem(20)
+        padding-top: $header-ht-sp

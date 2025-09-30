@@ -1,0 +1,191 @@
+@charset 'utf-8'
+@use '../s0__global' as *
+
+// ============================================================
+// レイアウト
+// ============================================================
+
+.c-logo
+    position: relative
+    display: flex
+    margin-bottom: rem(48)
+    .c-logo__inner
+        display: contents
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            display: flex
+    .c-logo__gr
+        display: flex
+    .-na
+        width: rem(67)
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            width: calc(rem(67) * .7)
+    .-ru
+        width: rem(56)
+        padding-top: rem(46)
+        margin-left: rem(-4)
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            width: calc(rem(56) * .7)
+            padding-top: calc(rem(46) * .7)
+            margin-left: calc(rem(-4) * .7)
+    .-ho
+        width: rem(64)
+        padding-top: rem(19)
+        margin-left: rem(10)
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            width: calc(rem(64) * .7)
+            padding-top: calc(rem(19) * .7)
+            margin-left: calc(rem(10) * .7)
+    .-do
+        width: rem(46)
+        padding-top: rem(46)
+        margin-left: rem(11)
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            width: calc(rem(46) * .7)
+            padding-top: calc(rem(46) * .7)
+            margin-left: calc(rem(11) * .7)
+
+    .-excl
+        width: rem(64)
+        padding-top: rem(23)
+        margin-left: rem(7)
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            width: calc(rem(64) * .7)
+            padding-top: calc(rem(23) * .7)
+            margin-left:calc( rem(7) * .7)
+
+    .-fu
+        width: rem(60)
+        padding-top: rem(21)
+        margin-left: rem(11)
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            width: calc(rem(60) * .7)
+            padding-top: calc(rem(21) * .7)
+            margin-left: calc(rem(11) * .7)
+    .-ji
+        width: rem(52)
+        padding-top: rem(49)
+        margin-left: rem(-2)
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            width: calc(rem(52) * .7)
+            padding-top: calc(rem(49) * .7)
+            margin-left: calc(rem(-2) * .7)
+    .-yo
+        width: rem(44)
+        padding-top: rem(24)
+        margin-left: rem(16)
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            width: calc(rem(44) * .7)
+            padding-top: calc(rem(24) * .7)
+            margin-left: calc(rem(16) * .7)
+    .-shi
+        width: rem(52)
+        padding-top: rem(45)
+        margin-left: rem(16)
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            width: calc(rem(52) * .7)
+            padding-top: calc(rem(45) * .7)
+            margin-left: calc(rem(16) * .7)
+    &__lead
+        font-size: rem(32)
+        text-align: center
+        line-height: 1
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            font-size: rem(24)
+
+.c-logo--intro
+    display: flex
+    margin-bottom: rem(48)
+    @media screen and (max-width: $breakpoint) and (orientation: portrait)
+        width: 100%
+        margin: 0 auto rem(48)
+    .c-logo__inner
+        display: contents
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            display: flex
+            flex-direction: column
+    .c-logo__gr
+        display: flex
+    .c-logo__inner--naruhodo
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            display: flex
+            flex-direction: row
+    .-na
+        width: calc(rem(67) * .75)
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            width: calc(rem(67) * .6)
+    .-ru
+        width: calc(rem(56) * .75)
+        padding-top: calc(rem(46) * .75)
+        margin-left: calc(rem(-4) * .75)
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            width: calc(rem(56) * .6)
+            padding-top: calc(rem(46) * .6)
+            margin-left: calc(rem(-4) * .6)
+    .-ho
+        width: calc(rem(64) * .75)
+        padding-top: calc(rem(19) * .75)
+        margin-left: calc(rem(10) * .75)
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            width: calc(rem(64) * .6)
+            padding-top: calc(rem(19) * .6)
+            margin-left: calc(rem(10) * .6)
+    .-do
+        width: calc(rem(46) * .75)
+        padding-top: calc(rem(46) * .75)
+        margin-left: calc(rem(11) * .75)
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            width: calc(rem(46) * .6)
+            padding-top: calc(rem(46) * .6)
+            margin-left: calc(rem(11) * .6)
+
+    .-excl
+        width: calc(rem(64) * .75)
+        padding-top: calc(rem(23) * .75)
+        margin-left: calc(rem(7) * .75)
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            width: calc(rem(64) * .6)
+            padding-top: calc(rem(23) * .6)
+            margin-left: calc(rem(7) * .6)
+
+    .-fu
+        width: calc(rem(60) * .75)
+        padding-top: calc(rem(21) * .75)
+        margin-left: calc(rem(11) * .75)
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            width: calc(rem(60) * .6)
+            padding-top: calc(rem(21) * .6)
+            margin-left: calc(rem(11) * .6)
+    .-ji
+        width: calc(rem(52) * .75)
+        padding-top: calc(rem(49) * .75)
+        margin-left: calc(rem(-2) * .75)
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            width: calc(rem(52) * .6)
+            padding-top: calc(rem(49) * .6)
+            margin-left: calc(rem(-2) * .6)
+    .-yo
+        width: calc(rem(44) * .75)
+        padding-top: calc(rem(24) * .75)
+        margin-left: calc(rem(16) * .75)
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            width: calc(rem(44) * .6)
+            padding-top: calc(rem(24) * .6)
+            margin-left: calc(rem(16) * .6)
+    .-shi
+        width: calc(rem(52) * .75)
+        padding-top: calc(rem(45) * .75)
+        margin-left: calc(rem(16) * .75)
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            width: calc(rem(52) * .6)
+            padding-top: calc(rem(45) * .6)
+            margin-left: calc(rem(16) * .6)
+    & ~.c-logo__lead
+        font-size: rem(28)
+        font-weight: bold
+        margin-bottom: rem(48)
+        text-align: start
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            font-size: rem(22)
+            padding-bottom: rem(40)
+            padding-left: unset
+            margin: 0 auto

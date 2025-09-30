@@ -1,0 +1,43 @@
+@charset 'utf-8'
+@use '../s0__global' as *
+
+.c-txt
+    &__sec-link
+        display: flex
+        align-items: center
+        gap: rem(16)
+        margin: 0
+        transition: .3s
+        p
+            font-size: rem(24)
+            font-weight: bold
+            line-height: 1
+            display: inline-block
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                font-size: rem(24)
+        &__btn
+            position: relative
+            width: rem(30)
+            aspect-ratio: 1/1
+            border-radius: 100vh
+            background-color: $bl
+            transition: .3s
+            @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                width: rem(26)
+            &::after
+                position: absolute
+                content: ''
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%)
+                background-image: url('/recruit-site/assets/img/top/ico-cmn__arrow__01.webp')
+                background-size: contain
+                background-repeat: no-repeat
+                width: 60%
+                aspect-ratio: 16/14
+    &__sec-link
+        &:hover
+            color: $r_bl
+            .c-txt__sec-link__btn
+                background-color: $r_bl
+

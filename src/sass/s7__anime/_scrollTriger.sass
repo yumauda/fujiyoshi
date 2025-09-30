@@ -1,0 +1,38 @@
+@charset 'utf-8'
+@use '../s0__global' as *
+
+.js-fadeIn
+    opacity: 0
+    transition: opacity .3s
+.js-fadeIn.is-active
+    opacity: 1
+
+
+// [ expand　/ ! ]　--------------------------------------------------
+.js-expand
+    opacity: 0
+.js-expand.is-active
+    animation-name: expand // logo.sass
+    animation-duration: .3s
+    animation-timing-function: ease
+    animation-fill-mode: both
+    animation-delay: 0
+
+// [ bounce ]　--------------------------------------------------
+
+.js-bounce
+    opacity: 0
+.js-bounce.is-active
+    animation-name: bounce
+    animation-duration: .3s
+    animation-timing-function: ease-in-out
+    animation-fill-mode: both
+@keyframes bounce
+  0%
+      opacity: 0
+      transform: translateY(0%)
+  70%
+      transform: translateY(-25%)
+  100%
+      opacity: 1
+      transform: translateY(0%)

@@ -1,0 +1,130 @@
+@charset 'utf-8'
+@use '../s0__global' as *
+@use './logo.sass' as *
+
+// ============================================================
+// オープニング　〜　fv
+// ============================================================
+
+// オープニング　 logo.sass
+// ------------------------------
+
+// オープニング　フェードアウト グループ
+// ------------------------------
+$start-fadeOut: .6s // 開始時間
+$dur-fadeOut: .3s // アニメーションの所要時間
+$time-fadeOut: calc($start-fadeOut + $dur-fadeOut) // グループの所要時間
+$time-first-anim: calc($time-naruhodo + $time-excl + $time-fujiyoshi + $time-lead + $time-fadeOut) // first-anim全体の所要時間
+
+.js-top__opening
+  display: none
+.js-top__opening.is-active
+  display: block
+  animation-name: fadeOutUp-opening
+  animation-duration: $dur-fadeOut
+  animation-timing-function: ease-in
+  animation-fill-mode: both
+  animation-delay: calc($time-naruhodo + $time-excl + $time-fujiyoshi + $time-lead + $start-fadeOut)
+
+  @keyframes fadeOutUp-opening
+    from
+      transform: translateY(0%)
+      opacity: 1
+    to
+      transform: translateY(-40%)
+      opacity: 0
+
+// fv グループ
+// ------------------------------
+$start-fv: .4s // 開始時間
+$gap-fv: .2s // 写真の段差
+$dur-fv: calc($gap-fv * 4) // アニメーションの所要時間
+$time-fvImg: calc($start-fv + $dur-fv) // グループの所要時間
+
+.js-top__fv__inner.is-active
+  animation-name: fadeInUp-fv
+  animation-duration: .5s
+  animation-timing-function: ease
+  animation-fill-mode: both
+  animation-delay: calc($time-first-anim + $start-fv + var(--index__fv-img) * $gap-fv) //　→各パーツに適応される
+  opacity: 0
+  transform: translateY(40%)
+
+  @keyframes fadeInUp-fv
+    from
+      opacity: 0
+      transform: translateY(50%)
+    to
+      opacity: 1
+      transform: translateY(0%)
+
+
+// header グループ
+// ------------------------------
+$start-head: .4s // 開始時間
+$dur-head: .4s // アニメーションの所要時間
+$time-head: calc($start-head + $dur-head) // グループの所要時間
+
+.js-header.is-appr
+  animation-name: fadeIn-header
+  animation-duration: $dur-head
+  animation-timing-function: ease
+  animation-fill-mode: both
+  animation-delay: calc($time-first-anim + $time-fvImg + $time-head)
+  opacity: 0
+
+  @keyframes fadeIn-header
+    from
+      opacity: 0
+    to
+      opacity: 1
+
+
+// ============================================================
+// イントロ
+// ============================================================
+
+// 本文
+// ------------------------------
+$dur-mainTxt: .5s
+$time-mainTxt: .5s
+
+.js-intro
+    .js__intro__txt-gr
+        opacity: 0
+.js-intro.is-active
+    .js__intro__txt-gr
+        animation-name: fadeIn-intro
+        animation-duration: $dur-mainTxt
+        animation-timing-function: ease
+        animation-fill-mode: both
+        // 初めの開始時間なし （× $start-n）
+        animation-delay: calc(($time-naruhodo - $start-n) + $time-excl + $time-fujiyoshi + $time-lead) //　→各パーツに適応される
+        opacity: 0
+@keyframes fadeIn-intro
+    from
+        opacity: 0
+    to
+        opacity: 1
+
+// ！
+// ------------------------------
+
+$time-intro-txt: calc(($time-naruhodo - $start-n) + $time-excl + $time-fujiyoshi + $time-lead + $time-mainTxt)
+
+.js-intro
+    .js-top__intro__excl__bl,.js-top__intro__excl__gn,.js-top__intro__excl__yl
+        opacity: 0
+.js-intro.is-active
+    .js-top__intro__excl__bl,.js-top__intro__excl__gn,.js-top__intro__excl__yl
+        animation-name: expand
+        animation-duration: $dur-e
+        animation-timing-function: ease
+        animation-fill-mode: both
+    .js-top__intro__excl__bl
+        animation-delay: calc($time-intro-txt + .6s) // 手動調整
+    .js-top__intro__excl__gn
+        animation-delay: calc($time-intro-txt + .9s) // 手動調整
+    .js-top__intro__excl__yl
+        animation-delay: calc($time-intro-txt + 1s) // 手動調整
+

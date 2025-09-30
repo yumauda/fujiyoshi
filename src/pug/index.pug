@@ -1,0 +1,270 @@
+-
+    var TOP_PAGE = true
+    var PAGE_TITLE = 'トップ'
+    var DESCRIPTION = '● ● ● ページの説明文'
+    var SUB_DIRECTION = '/'
+
+doctype html
+html(lang='ja')
+    include ./include/_head
+    body.js-body
+        section.p-top__opening.js-top__opening.is-active
+            .p-top__opening__wrap
+                .p-top__opening__outer
+                    .c-logo
+                        .c-logo__inner.c-logo__inner--naruhodo
+                            .c-logo__gr
+                                .c-logo__part--naruhodo.-na(style='--index__naruhodo:0'): img(src='/recruit-site/assets/img/top/logo__na.webp')
+                                .c-logo__part--naruhodo.-ru(style='--index__naruhodo:1'): img(src='/recruit-site/assets/img/top/logo__ru.webp')
+                                .c-logo__part--naruhodo.-ho(style='--index__naruhodo:2'): img(src='/recruit-site/assets/img/top/logo__ho.webp')
+                                .c-logo__part--naruhodo.-do(style='--index__naruhodo:3'): img(src='/recruit-site/assets/img/top/logo__do.webp')
+                            .c-logo__gr
+                                .c-logo__part--excl.-excl: img(src='/recruit-site/assets/img/top/logo__excl.webp')
+                        .c-logo__inner
+                            .c-logo__gr
+                                .c-logo__part--fujiyoshi.-fu(style='--index__fujiyoshi:0'): img(src='/recruit-site/assets/img/top/logo__fu.webp')
+                                .c-logo__part--fujiyoshi.-ji(style='--index__fujiyoshi:1'): img(src='/recruit-site/assets/img/top/logo__ji.webp')
+                                .c-logo__part--fujiyoshi.-yo(style='--index__fujiyoshi:2'): img(src='/recruit-site/assets/img/top/logo__yo.webp')
+                                .c-logo__part--fujiyoshi.-shi(style='--index__fujiyoshi:3'): img(src='/recruit-site/assets/img/top/logo__shi.webp')
+                    p.c-logo__lead.anim-logo__lead 水に、未来に、まっすぐ。
+        .bg-anim
+            include ./include/_header
+            main.p-top
+                section.p-top__fv
+                    .p-top__fv__wrap
+                        .p-top__fv__outer
+                            .p-top__fv__inner.js-top__fv__inner.is-active(style='--index__fv-img:0')
+                                img(src='/recruit-site/assets/img/top/img-fv_01.webp')
+                            .p-top__fv__inner.js-top__fv__inner.is-active(style='--index__fv-img:1')
+                                img(src='/recruit-site/assets/img/top/img-fv_02.webp')
+                            .p-top__fv__inner.js-top__fv__inner.is-active(style='--index__fv-img:2')
+                                img(src='/recruit-site/assets/img/top/img-fv_03.webp')
+                            .p-top__fv__inner.js-top__fv__inner.is-active(style='--index__fv-img:3')
+                                img(src='/recruit-site/assets/img/top/img-fv_04.webp')
+                section.p-top__intro.js-intro.js-target
+                    .l-container--800
+                        .p-top__intro__wrap
+                            .p-top__intro__outer
+                                h2.c-logo--intro
+                                    .c-logo__inner.c-logo__inner--naruhodo
+                                        .c-logo__gr(style='--index__all:0')
+                                            .c-logo__part--naruhodo.-na(style='--index__naruhodo:0'): img(src='/recruit-site/assets/img/top/logo__na.webp')
+                                            .c-logo__part--naruhodo.-ru(style='--index__naruhodo:1'): img(src='/recruit-site/assets/img/top/logo__ru.webp')
+                                            .c-logo__part--naruhodo.-ho(style='--index__naruhodo:2'): img(src='/recruit-site/assets/img/top/logo__ho.webp')
+                                            .c-logo__part--naruhodo.-do(style='--index__naruhodo:3'): img(src='/recruit-site/assets/img/top/logo__do.webp')
+                                        .c-logo__gr(style='--index__all:1')
+                                            .c-logo__part--excl.-excl: img(src='/recruit-site/assets/img/top/logo__excl.webp')
+                                    .c-logo__inner
+                                        .c-logo__gr(style='--index__all:2')
+                                            .c-logo__part--fujiyoshi.-fu(style='--index__fujiyoshi:0'): img(src='/recruit-site/assets/img/top/logo__fu.webp')
+                                            .c-logo__part--fujiyoshi.-ji(style='--index__fujiyoshi:1'): img(src='/recruit-site/assets/img/top/logo__ji.webp')
+                                            .c-logo__part--fujiyoshi.-yo(style='--index__fujiyoshi:2'): img(src='/recruit-site/assets/img/top/logo__yo.webp')
+                                            .c-logo__part--fujiyoshi.-shi(style='--index__fujiyoshi:3'): img(src='/recruit-site/assets/img/top/logo__shi.webp')
+                                p.c-logo__lead.js-logo__lead(style='--index__all:3') 水に、未来に、まっすぐ。
+
+                                .p-top__intro__txt-gr.js__intro__txt-gr
+                                    p
+                                        span 藤吉工業の会社や仕事を
+                                        br
+                                        span よく知っていただきたいから、
+                                        br
+                                        span.-lg.-bl 「フジヨシのホント」
+                                        br
+                                        span をお伝えします。
+                                    p
+                                        span 会社の想い、
+                                        br
+                                        span 仕事のリアル、
+                                        br
+                                        span 社員の素顔からやりがいまで。
+                                    p
+                                        span.-lg.-r-bl 「なるほど！」
+                                        br
+                                        span と納得していただけたら、
+                                        br
+                                        span ぜひご応募ください。
+                            .p-top__intro__excl
+                                .p-top__intro__excl__bl.js-top__intro__excl__bl
+                                    img(src='/recruit-site/assets/img/top/dec-intr__excl-bl.webp')
+                                .p-top__intro__excl__gn.js-top__intro__excl__gn
+                                    img(src='/recruit-site/assets/img/top/dec-intr__excl-gn.webp')
+                                .p-top__intro__excl__yl.js-top__intro__excl__yl
+                                    img(src='/recruit-site/assets/img/top/dec-intr__excl-yl.webp')
+
+                section.p-top__envr
+                    .l-section__wrap
+                        .l-container--1040
+                            .p-top__envr__wrap
+                                .p-top__envr__outer
+                                    .p-top__envr__txt-gr
+                                        .p-top__envr__ttl.js-fadeIn.js-target
+                                            p
+                                                span.-dot.-gn.js-bounce.js-target 技
+                                                span.-dot.-gn.js-bounce.js-target 術
+                                            p と
+                                            p
+                                                span.-dot.-yl.js-bounce.js-target 信
+                                                span.-dot.-yl.js-bounce.js-target 頼
+                                            p で
+                                            br
+                                            p 水の未来を変えていく
+                                        p.p-top__envr__lead
+                                            | 1959年、浄化槽の設計・施工メーカーとして創業した藤吉工業は、
+                                            br.u-br--pc
+                                            | 水処理をテーマに技術を高め、総合水処理プラントメーカーとして
+                                            br.u-br--pc
+                                            | 社会・環境インフラの最前線で、その保全に貢献しています。
+                                            br.u-br--pc
+                                            | ここでは、藤吉工業の環境事業について説明します。
+                                        a(href='/recruit-site/environment/')
+                                            h3.c-txt__sec-link
+                                                p フジヨシの環境事業について
+                                                .c-txt__sec-link__btn
+                                    .p-top__envr__img-gr.js-fadeIn.js-target
+                                        .p-top__envr__img.-num__01
+                                            img(src='/recruit-site/assets/img/top/img-envr__01.webp')
+                                        .p-top__envr__img.-num__02
+                                            img(src='/recruit-site/assets/img/top/img-envr__02.webp')
+                                        .p-top__envr__img.-num__03
+                                            img(src='/recruit-site/assets/img/top/img-envr__03.webp')
+                                        .p-top__envr__img.-num__04
+                                            img(src='/recruit-site/assets/img/top/img-envr__04.webp')
+                                .p-top__envr__excl-gr
+                                    .p-top__envr__excl.-yl.js-expand.js-target
+                                        img(src='/recruit-site/assets/img/top/dec-envr__excl-yl.webp')
+                                    .p-top__envr__excl.-gn.js-expand.js-target
+                                        img(src='/recruit-site/assets/img/top/dec-envr__excl-gn.webp')
+                section.p-top__work
+                    .l-section__wrap
+                        .l-container--1040
+                            a(href='/recruit-site/work/')
+                                h3.c-txt__sec-link
+                                    p 仕事を知る
+                                    .c-txt__sec-link__btn
+                            .p-top__work__wrap
+                                .p-top__work__customer
+                                    p.p-top__work__customer__tag お客様
+                                    p.p-top__work__customer__txt
+                                        | 官公庁・大手ゼネコン・ホテル・学校・
+                                        br.u-br--sp
+                                        | ショッピングモールなど
+                                .p-top__work__solution
+                                    .p-top__work__solution__ttl
+                                        span fujiyoshi&ensp;
+                                        | total solution
+                                    .p-top__work__solution__outer
+                                        .p-top__work__solution__inner
+                                            .p-top__work__solution__box.-bl.js-fadeIn.js-target
+                                                .p-top__work__solution__box__ttl
+                                                    p 設計・施工
+                                                    .c-txt__sec-link__btn.-work
+                                                .p-top__work__solution__box__inner
+                                                    .p-top__work__solution__box__img
+                                                        img(src='/recruit-site/assets/img/top/img-work__01.webp')
+                                                    .p-top__work__solution__box__img__hov-txt
+                                                        | 水処理をデザインする
+                                                        br
+                                                        | 設計・施工の技術者集団
+                                                p.p-top__work__solution__box__tag 本社事業本部
+                                        .p-top__work__solution__inner
+                                            .p-top__work__solution__box.-pk.js-fadeIn.js-target
+                                                .p-top__work__solution__box__ttl
+                                                    p メンテナンス
+                                                    .c-txt__sec-link__btn.-work
+                                                .p-top__work__solution__box__inner
+                                                    .p-top__work__solution__box__img
+                                                        img(src='/recruit-site/assets/img/top/img-work__02.webp')
+                                                    .p-top__work__solution__box__img__hov-txt
+                                                        | プラントと水の安全を守る
+                                                        br
+                                                        | 設備保全スペシャリスト
+                                                p.p-top__work__solution__box__tag プラントサービス本部
+                                        .p-top__work__solution__inner
+                                            .p-top__work__solution__box.-gn.js-fadeIn.js-target
+                                                .p-top__work__solution__box__ttl
+                                                    p 環境測定
+                                                    .c-txt__sec-link__btn.-work
+                                                .p-top__work__solution__box__inner
+                                                    .p-top__work__solution__box__img
+                                                        img(src='/recruit-site/assets/img/top/img-work__03.webp')
+                                                    .p-top__work__solution__box__img__hov-txt
+                                                        | 水、土、大気。目に見えない
+                                                        br
+                                                        | 環境を数値化する分析の専門家
+                                                p.p-top__work__solution__box__tag フジヨシ水処理技術研究所
+                                    .p-top__work__solution__box.-gy.-support
+                                        p.p-top__work__solution__box__ttl.-suport
+                                            | 社内・グループの働く人をサポート
+                                        p.p-top__work__solution__box__tag 総務部 / 業務課
+                            .p-top__work__excl-gr
+                                .p-top__work__excl.js-expand.js-target
+                                    img(src='/recruit-site/assets/img/top/dec-work__excl-bl.webp')
+                section.p-top__company
+                    .l-section__wrap
+                        .l-container--1040
+                            a(href='/recruit-site/company/')
+                                h3.c-txt__sec-link
+                                    p 会社を知る
+                                    .c-txt__sec-link__btn
+                            .p-top__company__outer
+                                a(href='/recruit-site/company/number.html').p-top__company__box
+                                    .p-top__company__inner
+                                        .p-top__company__txt-gr
+                                            .p-top__company__ttl
+                                                p 数字でみるフジヨシ
+                                                .c-txt__sec-link__btn
+                                            p.p-top__company__txt
+                                                | 藤吉工業の社員の平均勤続年数は「20年」。
+                                                | これ、実はかなりすごい数字なんです。
+                                        .p-top__company__img.-number
+                                            img(src='/recruit-site/assets/img/top/ico-comp__01.webp')
+                                a(href='/recruit-site/company/training.html').p-top__company__box
+                                    .p-top__company__inner
+                                        .p-top__company__txt-gr
+                                            .p-top__company__ttl
+                                                p 研修制度
+                                                .c-txt__sec-link__btn
+                                            p.p-top__company__txt
+                                                | 社員が安心して長く働けるよう、
+                                                br.u-br--pc
+                                                | 充実した福利厚生制度を整えています。
+                                        .p-top__company__img
+                                            img(src='/recruit-site/assets/img/top/ico-comp__02.webp')
+                                a(href='/recruit-site/company/welfare.html').p-top__company__box
+                                    .p-top__company__inner
+                                        .p-top__company__txt-gr
+                                            .p-top__company__ttl
+                                                p 福利厚生
+                                                .c-txt__sec-link__btn
+                                            p.p-top__company__txt
+                                                | 当社では、社員一人ひとりのスキルアップを
+                                                | 支援するために、研修制度を用意しています。
+                                        .p-top__company__img
+                                            img(src='/recruit-site/assets/img/top/ico-comp__03.webp')
+                                a(href='/recruit-site/company/question.html').p-top__company__box
+                                    .p-top__company__inner
+                                        .p-top__company__txt-gr
+                                            .p-top__company__ttl
+                                                p よくあるご質問
+                                                .c-txt__sec-link__btn
+                                            p.p-top__company__txt
+                                                | 仕事内容や働き方、選考フローなど、ご不明な点が
+                                                | あればまずはこちらをご覧ください。
+                                        .p-top__company__img
+                                            img(src='/recruit-site/assets/img/top/ico-comp__04.webp')
+                section.p-top__philosophy
+                    .l-section__wrap
+                        .l-container--800
+                            .p-top__philosophy__wrap.js-fadeIn.js-target
+                                .p-top__philosophy__ttl 経営理念
+                                .p-top__philosophy__outer
+                                    .p-top__philosophy__logo
+                                        img(src='/recruit-site/assets/img/top/logo__phil.webp')
+                                    p.p-top__philosophy__txt
+                                        | 私たちは、「さすが、フジヨシ！」と言われる
+                                        br.u-br--pc
+                                        | 最高の環境技術を身につけ、顧客に提案します。
+                            .p-top__philosophy__excl.js-expand.js-target
+                                img(src='/recruit-site/assets/img/top/dec-phil__excl-bl.webp')
+
+            include ./include/_footer

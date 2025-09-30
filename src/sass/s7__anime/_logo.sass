@@ -1,0 +1,80 @@
+@charset 'utf-8'
+@use '../s0__global' as *
+
+// 「なるほど」 グループ
+// ------------------------------
+$start-n: 1s // 開始時間
+$gap-n: .15s // 文字の段差
+$dur-n: calc($gap-n * 4) // アニメーションの所要時間
+$time-naruhodo: calc($start-n + $dur-n) // グループの所要時間
+
+.c-logo__part--naruhodo
+    opacity: 0
+.p-top__opening .c-logo__part--naruhodo,.p-top__intro.is-active .c-logo__part--naruhodo
+    animation-name: fadeIn
+    animation-duration: .7s
+    animation-timing-function: ease
+    animation-fill-mode: both
+    animation-delay: calc(var(--index__naruhodo) * $gap-n) //　→各パーツに適応される
+@keyframes fadeIn
+    from
+        opacity: 0
+    to
+        opacity: 1
+
+// 「！」 グループ
+// ------------------------------
+$start-e: .1s // 開始時間
+$dur-e: .3s // アニメーションの所要時間
+$time-excl: calc($start-e + $dur-e) // グループの所要時間
+
+.c-logo__part--excl
+    opacity: 0
+.p-top__opening .c-logo__part--excl,.p-top__intro.is-active .c-logo__part--excl
+    animation-name: expand
+    animation-duration: $dur-e
+    animation-timing-function: ease
+    animation-fill-mode: both
+    animation-delay: calc(($time-naruhodo - $start-n) + $start-e)
+@keyframes expand
+    0%
+        opacity: 0
+    30%
+        opacity: 1
+        transform: scale(1.2)
+    100%
+        opacity: 1
+        transform: scale(1)
+
+// 「フジヨシ」 グループ
+// ------------------------------
+$start-f: .2s // 開始時間
+$gap-f: .15s // 文字の段差
+$dur-f: calc($gap-f * 4) // アニメーションの所要時間
+$time-fujiyoshi: calc($start-f + $dur-f) // グループの所要時間
+
+.c-logo__part--fujiyoshi
+    opacity: 0
+.p-top__opening .c-logo__part--fujiyoshi,.p-top__intro.is-active .c-logo__part--fujiyoshi
+    animation-name: fadeIn
+    animation-duration: .7s
+    animation-timing-function: ease
+    animation-fill-mode: both
+    animation-delay: calc(($time-naruhodo - $start-n) + $time-excl + $start-f + var(--index__fujiyoshi) * $gap-f) //　→各パーツに適応される
+
+// 「水に、未来に、まっすぐ。」 グループ
+// ------------------------------
+$start-l: .3s // 開始時間
+$dur-l: .7s // アニメーションの所要時間
+$time-lead: calc($start-l + $dur-l) // グループの所要時間
+
+.c-logo__lead
+    opacity: 0
+.p-top__opening .c-logo__lead,.p-top__intro.is-active .c-logo__lead
+    animation-name: fadeIn
+    animation-duration: $dur-l
+    animation-timing-function: ease
+    animation-fill-mode: both
+    animation-delay: calc(($time-naruhodo - $start-n) + $time-excl + $time-fujiyoshi + $start-l)
+
+

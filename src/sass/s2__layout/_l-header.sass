@@ -1,0 +1,236 @@
+@charset 'utf-8'
+@use '../s0__global' as *
+
+.l-header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: $z-index__header
+  transition: .3s
+  &.is-scrolled
+    background-color: $wh
+  .l-container--1400
+    @media screen and (max-width: $breakpoint) and (orientation: portrait)
+      padding: 0
+  &__wrap
+    height: $header-ht
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @media screen and (max-width: $breakpoint) and (orientation: portrait)
+      height: $header-ht-sp
+  &__outer
+    display: flex
+    align-items: center
+  &__outer.-first
+    gap: rem(80)
+  &__outer.-second
+    gap: rem(36)
+    @media screen and (max-width: $breakpoint) and (orientation: portrait)
+      padding-right: rem(12)
+
+  &__logo
+    width: rem(176)
+    @media screen and (max-width: $breakpoint) and (orientation: portrait)
+      width: rem(200)
+      padding-left: rem(16)
+    img.-pc
+      display: block
+      @media screen and (max-width: $breakpoint) and (orientation: portrait)
+        display: none
+    img.-sp
+      display: none
+      @media screen and (max-width: $breakpoint) and (orientation: portrait)
+        display: block
+
+  // ============================================================
+  // ナビゲーション
+  // ============================================================
+  &__nav
+    display: flex
+    align-items: center
+    @media screen and (max-width: $breakpoint) and (orientation: portrait)
+      opacity: 0
+      visibility: hidden
+      position: absolute
+      top: 0
+      right: 0
+      width: 56vw
+      height: 0
+      background-color: $wh
+      z-index: -5
+      align-items: unset
+      transition: opacity .3s
+    *
+      @media screen and (max-width: $breakpoint) and (orientation: portrait)
+        height: 0
+    &__list
+      display: flex
+      gap: rem(32)
+      @media screen and (max-width: $breakpoint) and (orientation: portrait)
+        flex-direction: column
+        width: 100%
+        height: 100%
+        padding-top: rem(120)
+        padding-left: rem(40)
+        gap: rem(48)
+    &__item
+      position: relative
+      .c-txt__sec-link
+        gap: rem(8)
+        p
+          font-size: rem(14)
+          @media screen and (max-width: $breakpoint) and (orientation: portrait)
+            font-size: rem(16)
+        &__btn
+          width: rem(20)
+    &__item--has-sub
+      > a
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+          display: block
+          margin-bottom: rem(16)
+    &__sub-list
+      position: absolute
+      opacity: 0
+      visibility: hidden
+      background-color: $bl
+      width: 100%
+      top: rem(50)
+      padding: rem(12)
+      transition: .3s
+      @media screen and (max-width: $breakpoint) and (orientation: portrait)
+        position: static
+        opacity: 1
+        visibility: visible
+        background-color: unset
+        padding: unset
+    &__sub-list.-work
+      width: rem(120)
+      @media screen and (max-width: $breakpoint) and (orientation: portrait)
+        width: 100%
+    &__sub-list.-company
+      width: rem(160)
+      @media screen and (max-width: $breakpoint) and (orientation: portrait)
+        width: 100%
+    &__sub-item
+      position: relative
+      line-height: 1.8
+      padding-left: rem(16)
+      color: $wh
+      @media screen and (max-width: $breakpoint) and (orientation: portrait)
+        line-height: 2.5
+        color: $bk
+      &::after
+        position: absolute
+        content: '-'
+        font-weight: 600
+        left: 0
+      a
+        font-size: rem(14)
+        color: $wh
+        transition: .3s
+        @media screen and (max-width: $breakpoint) and (orientation: portrait)
+          color: $bk
+        &:hover
+          color: $r_bl
+
+  // ナビゲーション / PC　ホバー時
+  //  ------------------------------------------------------------
+
+  @media screen and (min-width: 768px) // PC時のみ
+    .l-header__nav__item--has-sub:hover
+      .l-header__nav__sub-list
+        opacity: 1
+        visibility: visible
+
+  // ナビゲーション　 / ハンバーガークリック時
+  // ------------------------------------------------------------
+  &__nav.is-open
+    @media screen and (max-width: $breakpoint) and (orientation: portrait)
+      opacity: 1
+      visibility: visible
+      height: 100vh
+    *
+      @media screen and (max-width: $breakpoint) and (orientation: portrait)
+        height: auto
+  // ------------------------------------------------------------
+
+  &__btn
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $bl
+    border-radius: 8px
+    text-transform: uppercase
+    font-size: rem(16)
+    color: $wh
+    width: rem(104)
+    height: rem(48)
+    transition: .3s
+    @media screen and (max-width: $breakpoint) and (orientation: portrait)
+      width: rem(96)
+      height: rem(40)
+    &:hover
+      background-color: $r_bl
+    &__txt
+      position: relative
+      padding-right: rem(24)
+      padding-left: rem(8)
+      line-height: 1
+      @media screen and (max-width: $breakpoint) and (orientation: portrait)
+        font-size: rem(14)
+      &::after
+        position: absolute
+        content: ''
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+        width: rem(12)
+        aspect-ratio: 1 / 1
+        background-image: url(/recruit-site/assets/img/top/ico-cmn__list-arrow__wh.webp)
+        background-repeat: no-repeat
+        background-size: contain
+
+  // ============================================================
+  // ハンバーガー
+  // ============================================================
+  &__hamburger
+    display: none
+    @media screen and (max-width: $breakpoint) and (orientation: portrait)
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 40px
+      aspect-ratio: 1 / 1
+      cursor: pointer
+    &__inner
+      @media screen and (max-width: $breakpoint) and (orientation: portrait)
+        position: relative
+        width: 32px
+        height: 20px
+      span
+        position: absolute
+        left: 0
+        width: 32px
+        height: 4px
+        background-color: $bl
+        border-radius: 100vh
+        transition: .3s
+        &:nth-of-type(1)
+          top: 0
+        &:nth-of-type(2)
+          top: 8px
+        &:nth-of-type(3)
+          top: 16px
+
+  // ハンバーガー / クリック時
+  // ------------------------------------------------------------
+  &__hamburger.is-open
+    span
+      &:nth-of-type(1)
+        transform: translateY(8px) rotate(-45deg)
+      &:nth-of-type(2)
+        opacity: 0
+      &:nth-of-type(3)
+        transform: translateY(-8px) rotate(45deg)

@@ -1,0 +1,45 @@
+
+header.l-header.js-header(class=TOP_PAGE ? 'is-appr' : '')
+
+  .l-container--1400
+    .l-header__wrap
+      .l-header__outer.-first
+        a(href='/recruit-site/')
+          h1.l-header__logo
+            img.-pc(src='/recruit-site/assets/img/top/logo__01.webp')
+            img.-sp(src='/recruit-site/assets/img/top/logo__01-sp.webp')
+        nav.l-header__nav.js-header__nav
+          ul.l-header__nav__list
+            li.l-header__nav__item
+              a(href="/recruit-site/environment/")
+                h3.c-txt__sec-link
+                  p フジヨシの環境事業
+                  .c-txt__sec-link__btn
+            li.l-header__nav__item.l-header__nav__item--has-sub
+              a(href="/recruit-site/work/")
+                h3.c-txt__sec-link
+                  p 仕事を知る
+                  .c-txt__sec-link__btn
+              ul.l-header__nav__sub-list.-work
+                li.l-header__nav__sub-item: a(href="/recruit-site/work/construction.html") 施工管理
+                li.l-header__nav__sub-item: a(href="/recruit-site/work/maintenance.html") メンテナンス
+                li.l-header__nav__sub-item: a(href="/recruit-site/work/envr-measure.html") 環境測定
+            li.l-header__nav__item.l-header__nav__item--has-sub
+              a(href="/recruit-site/company/")
+                h3.c-txt__sec-link
+                  p 会社を知る
+                  .c-txt__sec-link__btn
+              ul.l-header__nav__sub-list.-company
+                li.l-header__nav__sub-item: a(href="/recruit-site/company/number.html") 数字でみるフジヨシ
+                li.l-header__nav__sub-item: a(href="/recruit-site/company/training.html") 研修制度
+                li.l-header__nav__sub-item: a(href="/recruit-site/company/welfare.html") 福利厚生
+                li.l-header__nav__sub-item: a(href="/recruit-site/company/question.html") Q&A
+      .l-header__outer.-second
+        a.l-header__btn(href='#',target='_blank')
+          p.l-header__btn__txt entry
+        button.l-header__hamburger.js-hamburger
+          .l-header__hamburger__inner
+            span
+            span
+            span
+
