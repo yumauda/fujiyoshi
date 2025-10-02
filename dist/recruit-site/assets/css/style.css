@@ -3318,6 +3318,59 @@ body {
   letter-spacing: 0.05em;
 }
 
+.p-page-mv__lists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9375rem;
+  margin-top: 3.75rem;
+}
+
+.p-page-mv__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.625rem;
+  background: #D0F1FF;
+  border-radius: 1.25rem;
+  padding-top: 1.5625rem;
+  padding-bottom: 1.5625rem;
+}
+
+.p-page-mv__link--maintenance {
+  background: #FFEFFB;
+}
+
+.p-page-mv__link--environment {
+  background: #E4FCEB;
+}
+
+.p-page-mv__link-text {
+  color: #000000;
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+.p-page-mv__title {
+  color: #fff;
+  background: #1191BE;
+  border-top-left-radius: 1.875rem;
+  border-bottom-right-radius: 1.875rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+  padding-top: 1.6875rem;
+  padding-bottom: 1.6875rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  text-align: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 2.5rem;
+  letter-spacing: 0.05em;
+  margin-top: -2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
 .p-total {
   padding-top: 5rem;
   padding-bottom: 5rem;
