@@ -32,9 +32,38 @@
   border-radius: 9999px
 
 .p-total__top-text
+  position: relative
   color: #000
   font-size: rem(18)
   font-weight: 900
+
+.p-total__top-text::before
+  content: ''
+  position: absolute
+  bottom: rem(-48)
+  left: rem(-56)
+  width: rem(33)
+  height: auto
+  aspect-ratio: 34 / 40
+  object-fit: cover
+  background: url(../../assets/img/job_all/arrow_blue.png)
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+
+.p-total__top-text::after
+  content: ''
+  position: absolute
+  bottom: rem(-48)
+  right: rem(-56)
+  width: rem(33)
+  height: auto
+  aspect-ratio: 34 / 40
+  object-fit: cover
+  background: url(../../assets/img/job_all/arrow_orange.png)
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
 
 .p-total__cards
   margin-top: rem(30)
@@ -61,6 +90,11 @@
   gap: rem(40)
   margin-top: rem(24)
 
+@media (max-width: 768px)
+  .p-total__lists
+    grid-template-columns: 1fr
+    gap: rem(20)
+
 .p-total__list
 
 .p-total__link
@@ -77,8 +111,10 @@
   background: #D0F1FF
   border-top-left-radius: rem(20)
   border-top-right-radius: rem(20)
+  
 .p-total__link-top--maintenance
   background: #FFEFFB
+
 .p-total__link-top--environment
   background: #E4FCEB
 
@@ -102,18 +138,20 @@
   display: flex
   align-items: center
   justify-content: center
-  background: url(../../assets/img/top/total_bg1.png)
+  background: url(../../assets/img/job_all/total_bg1.png)
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  
+
+.p-total__list-titleWrapper--maintenance
+  background: url(../../assets/img/job_all/total_bg2.png)
   background-size: cover
   background-position: center
   background-repeat: no-repeat
 
-.p-total__list-titleWrapper--maintenance
-  background: url(../../assets/img/top/total_bg2.png)
-  background-size: cover
-  background-position: center
-  background-repeat: no-repeat
 .p-total__list-titleWrapper--environment
-  background: url(../../assets/img/top/total_bg3.png)
+  background: url(../../assets/img/job_all/total_bg3.png)
   background-size: cover
   background-position: center
   background-repeat: no-repeat
@@ -135,3 +173,32 @@
   margin-right: auto
   margin-top: rem(-20)
   text-align: center
+
+.p-total__bottom
+  background: #F2F2F2
+  border-radius: rem(20)
+  margin-top: rem(20)
+  padding-top: rem(19)
+  padding-bottom: rem(35)
+  text-align: center
+
+.p-total__bottom-text
+  color: #000000
+  font-size: rem(18)
+  font-weight: 900
+
+.p-total__bottom-blue
+  color: #fff
+  background: #013990 
+  border-radius: 9999px
+  font-size: rem(14)
+  padding-top: rem(6)
+  padding-bottom: rem(6)
+  max-width: rem(236)
+  width: 100%
+  font-weight: 900
+  margin-left: auto
+  margin-right: auto
+  display: block
+  text-align: center
+  margin-top: rem(-16)
