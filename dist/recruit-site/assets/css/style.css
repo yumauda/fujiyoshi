@@ -3371,6 +3371,10 @@ body {
   z-index: 1;
 }
 
+.p-page-mv__title--maintenance {
+  background: rgba(180, 93, 133, 0.9);
+}
+
 .p-total {
   padding-top: 5rem;
   padding-bottom: 5rem;
