@@ -3375,6 +3375,10 @@ body {
   background: rgba(180, 93, 133, 0.9);
 }
 
+.p-page-mv__title--maintenance2 {
+  background: rgba(104, 150, 69, 0.9);
+}
+
 .p-total {
   padding-top: 5rem;
   padding-bottom: 5rem;
