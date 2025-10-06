@@ -3,7 +3,7 @@
 @use '../s7__anime/logo' as *
 
 body
-  overflow-x : clip
+  overflow-x: clip
 
 // ====================================
 // About Page Styles
@@ -35,7 +35,7 @@ body
       font-weight: bold
       color: #333
       line-height: 1.6
-  .mt40 
+  .mt40
     margin-top: rem(40)
   &__text
     font-size: rem(16)
@@ -56,17 +56,17 @@ body
     font-weight: 700
     color: #000
     line-height: 1.6
-  .mt40 
+  .mt40
     margin-top: rem(40)
   &__text-wrapper
     margin-top: rem(40)
-  &__img 
+  &__img
     margin-top: rem(40)
   &__img img
-     width: 100%;
-     height: auto;
-     object-fit: cover;
-     object-position: center center;
+    width: 100%
+    height: auto
+    object-fit: cover
+    object-position: center center
 
   &__text
     font-size: rem(16)
@@ -268,15 +268,13 @@ body
   padding-bottom: rem(100)
   background: #fff
 
-  
-
   &__title
     font-size: rem(32)
     font-weight: 700
     color: #000
   &__inner
-  max-width: rem(1040)
-  margin: 0 auto
+    max-width: rem(1040)
+    margin: 0 auto
   &__text
     font-size: rem(16)
     margin-top: rem(40)
@@ -362,7 +360,6 @@ body
 .p-about-future
   padding-bottom: rem(80)
   background: #fff
-  
 
   &__inner
     max-width: rem(1040)
@@ -390,7 +387,7 @@ body
     color: #000
     margin-bottom: 20px
     text-align: justify
-  .mt40 
+  .mt40
     margin-top: rem(40)
 
 // About Cards (下部カードセクション)
@@ -420,10 +417,10 @@ body
   border-radius: rem(30)
 
   &__icon svg
-     width: 100%;
-     height: auto;
-     object-fit: cover;
-     object-position: center center;
+    width: 100%
+    height: auto
+    object-fit: cover
+    object-position: center center
 
   &:hover
     transform: translateY(-8px)
@@ -450,10 +447,39 @@ body
     text-align: center
     position: relative
 
-.p-about-card--work 
+.p-about-card--work
   background: url(../../assets/img/top/bottom_2.png)
   background-size: cover
+  
+.p-about-card--company
+  background: url(../../assets/img/job_all/bottom_3.png)
+  background-size: cover
 
+.p-about-section__dot--blue,
+.p-about-section__dot--orange
+  position: relative
+
+.p-about-section__dot--blue::before 
+  position: absolute
+  content: ''
+  width: rem(10)
+  height: rem(10)
+  background: #26CEA2
+  border-radius: 9999px
+  left: 50%
+  transform: translateX(-50%)
+  top: rem(-13)
+
+.p-about-section__dot--orange::before 
+  position: absolute
+  content: ''
+  width: rem(10)
+  height: rem(10)
+  background: #E6D25F
+  border-radius: 9999px
+  left: 50%
+  transform: translateX(-50%)
+  top: rem(-13)
 // Responsive
 @media (max-width: 768px)
   .p-about-section,
@@ -473,7 +499,7 @@ body
   .p-about-solution__cycle
     grid-template-columns: 1fr
     grid-template-rows: auto
-    gap: 30px
+    gap: rem(30)
     min-height: auto
 
     &-item
@@ -489,26 +515,26 @@ body
       left: auto
       transform: none
       width: 100%
-      max-width: 200px
-      margin: 20px auto
+      max-width: rem(200)
+      margin: rem(20) auto
 
   .p-about-expertise__visual
-    padding: 40px 20px
+    padding: rem(40) rem(20)
 
     &-title h3
-      font-size: 32px
+      font-size: rem(32)
 
     &-images
       grid-template-columns: repeat(2, 1fr)
-      gap: 15px
+      gap: rem(15)
 
     &-features
       flex-direction: column
-      gap: 15px
+      gap: rem(15)
 
   .p-about-cards__inner
     grid-template-columns: 1fr
-    gap: 30px
+    gap: rem(30)
 
   .p-about-card__title
-    font-size: 18px
+    font-size: rem(18)
