@@ -4,6 +4,9 @@
 
 .p-page-mv
   padding-top: rem(210)
+@media (max-width: 768px)
+  .p-page-mv
+    padding-top: rem(100)
 
 .p-page-mv__inner
   max-width: rem(1240)
@@ -15,6 +18,9 @@
 
 .p-page-mv__img
   margin-top: rem(50)
+@media (max-width: 768px)
+  .p-page-mv__img
+    margin-top: rem(40)
 
 .p-page-mv__img img
   width: 100%
@@ -22,19 +28,25 @@
   object-fit: cover
   object-position: center center
   border-radius: rem(30)
+@media (max-width: 768px)
+  .p-page-mv__img img
+    border-radius: rem(20)
+    aspect-ratio: 375 / 210
 
 .p-page-mv__title-wrapper
   display: flex
   align-items: center
   gap: rem(30)
 
-  
 .p-page-mv__ttl
   width: fit-content
   display: inline-block
   font-size: rem(42)
   color: #000000
   font-weight: 700
+@media (max-width: 768px)
+  .p-page-mv__ttl
+    font-size: rem(24)
 
 .p-page-mv__text-wrapper
   margin-top: rem(60)
@@ -54,6 +66,12 @@
   grid-template-columns: repeat(3, 1fr)
   gap: rem(15)
   margin-top: rem(60)
+
+@media (max-width: 768px)
+  .p-page-mv__lists
+    grid-template-columns: 1fr
+    margin-top: rem(40)
+    gap: rem(10)
 
 .p-page-mv__list
 
@@ -97,6 +115,15 @@
   margin-top: rem(-40)
   position: relative
   z-index: 1
+
+@media (max-width: 768px)
+  .p-page-mv__title
+    font-size: rem(20)
+    padding-top: rem(20)
+    padding-bottom: rem(20)
+    padding-left: rem(20)
+    padding-right: rem(20)
+    margin-top: rem(-20)
 
 .p-page-mv__title--maintenance
   background: rgba($color: #B45D85, $alpha: 0.9)
