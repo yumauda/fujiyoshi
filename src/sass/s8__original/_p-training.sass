@@ -1,0 +1,87 @@
+@charset 'utf-8'
+@use '../s0__global' as *
+@use '../s7__anime/logo' as *
+
+.p-training
+  padding-top: rem(48)
+  padding-bottom: rem(100)
+
+.p-training__inner
+  max-width: rem(1170)
+  width: 100%
+  margin-inline: auto
+  padding-left: rem(25)
+  padding-right: rem(25)
+
+.p-training__content
+
+.p-training__lists
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: rem(40)
+@media (max-width: 768px)
+  .p-training__lists
+    grid-template-columns: 1fr
+    gap: rem(20)
+
+.p-training__list
+  position: relative
+  background: #E4F3FA
+  border-radius: rem(30)
+  padding-left: rem(80)
+  padding-right: rem(40)
+  padding-top: rem(40)
+  padding-bottom: rem(40)
+
+@media (max-width: 768px)
+  .p-training__list
+    padding-right: rem(40)
+    padding-top: rem(20)
+    padding-bottom: rem(20)
+
+.p-training__list::before
+  content: attr(data-number)
+  position: absolute
+  top: 0
+  left: 0
+  width: rem(60)
+  height: rem(60)
+  display: flex
+  align-items: center
+  justify-content: center
+  color: #fff
+  font-size: rem(26)
+  font-weight: 500
+  background: #FABF15
+  border-top-left-radius: rem(30)
+  border-bottom-right-radius: rem(30)
+
+.p-training__list--red::before
+  content: attr(data-number)
+  position: absolute
+  top: 0
+  left: 0
+  width: rem(60)
+  height: rem(60)
+  display: flex
+  align-items: center
+  justify-content: center
+  color: #fff
+  font-size: rem(26)
+  font-weight: 500
+  background: #E36EA4
+  border-top-left-radius: rem(30)
+  border-bottom-right-radius: rem(30)
+
+.p-training__title
+  font-size: rem(18)
+  font-weight: 700
+  color: #000
+  letter-spacing: 0.05em
+
+.p-training__text
+  margin-top: rem(20)
+  font-size: rem(16)
+  font-weight: 500
+  line-height: calc( 24 / 16 )
+  letter-spacing: 0.05em
