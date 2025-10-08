@@ -11,7 +11,7 @@ body
 
 // About Section (水処理が持続可能な社会を支える)
 .p-about-section
-  padding: 80px 0
+  padding: rem(110) 0
 
   &__inner
     max-width: 1040px
@@ -46,7 +46,7 @@ body
 
 // About Solution (水処理のトータルソリューション)
 .p-about-solution
-  padding-bottom: rem(80)
+  padding-bottom: rem(117)
 
   &__inner
     max-width: rem(1040)
@@ -265,7 +265,7 @@ body
 
 // About Expertise (多様な実績と高度な技術力)
 .p-about-expertise
-  padding-bottom: rem(100)
+  padding-bottom: rem(117)
   background: #fff
 
   &__title
@@ -376,16 +376,16 @@ body
 
     &-main
       display: block
-      font-size: 28px
+      font-size: rem(28)
       font-weight: bold
       color: #333
       line-height: 1.6
 
   &__text
-    font-size: 16px
+    font-size: rem(16)
     line-height: 2
     color: #000
-    margin-bottom: 20px
+    margin-bottom: rem(20)
     text-align: justify
   .mt40
     margin-top: rem(40)
@@ -401,6 +401,15 @@ body
     display: grid
     grid-template-columns: repeat(2, 1fr)
     gap: rem(40)
+    padding-left: rem(25)
+    padding-right: rem(25)
+    max-width: rem(1250)
+    margin-inline: auto
+    
+  @media (max-width: 768px)
+    padding-left: initial
+    padding-right: initial
+    gap: rem(20)
 
 .p-about-card
   display: flex
@@ -450,7 +459,7 @@ body
 .p-about-card--work
   background: url(../../assets/img/top/bottom_2.png)
   background-size: cover
-  
+
 .p-about-card--company
   background: url(../../assets/img/job_all/bottom_3.png)
   background-size: cover
@@ -459,7 +468,7 @@ body
 .p-about-section__dot--orange
   position: relative
 
-.p-about-section__dot--blue::before 
+.p-about-section__dot--blue::before
   position: absolute
   content: ''
   width: rem(10)
@@ -470,7 +479,7 @@ body
   transform: translateX(-50%)
   top: rem(-13)
 
-.p-about-section__dot--orange::before 
+.p-about-section__dot--orange::before
   position: absolute
   content: ''
   width: rem(10)
@@ -480,13 +489,22 @@ body
   left: 50%
   transform: translateX(-50%)
   top: rem(-13)
+@media (max-width: 768px)
+  .p-about-section__dot--orange::before
+    top: rem(-10)
+    width: rem(6)
+    height: rem(6)
+  .p-about-section__dot--blue::before
+    top: rem(-10)
+    width: rem(6)
+    height: rem(6)
 // Responsive
 @media (max-width: 768px)
   .p-about-section,
   .p-about-solution,
   .p-about-expertise,
   .p-about-future
-    padding: 60px 20px
+    padding: rem(40) rem(20)
 
   .p-about-section__title-main,
   .p-about-solution__title,
@@ -495,6 +513,12 @@ body
     font-size: rem(32)
     font-weight: 700
     color: #000000
+  @media (max-width: 768px)
+    .p-about-section__title-main,
+    .p-about-solution__title,
+    .p-about-expertise__title,
+    .p-about-future__title-main
+      font-size: rem(24)
 
   .p-about-solution__cycle
     grid-template-columns: 1fr
@@ -538,3 +562,7 @@ body
 
   .p-about-card__title
     font-size: rem(18)
+.sp-only
+  display: none
+  @media (max-width: 768px)
+    display: block

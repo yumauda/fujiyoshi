@@ -5,6 +5,9 @@
 .p-total
   padding-top: rem(80)
   padding-bottom: rem(80)
+  @media (max-width: 768px)
+    padding-top: rem(40)
+    padding-bottom: rem(40)
 
 .p-total__inner
   max-width: rem(1240)
@@ -22,6 +25,10 @@
   background: #EFE3A2
   border-radius: rem(30)
   padding: rem(24) rem(40)
+  @media (max-width: 768px)
+    flex-direction: column
+    padding: rem(16)
+    gap: rem(12)
 
 .p-total__white
   color: #fff
@@ -30,12 +37,18 @@
   font-weight: 700
   padding: rem(6) rem(40)
   border-radius: 9999px
+  @media (max-width: 768px)
+    font-size: rem(14)
+    width: fit-content
+    padding: rem(6) rem(20)
 
 .p-total__top-text
   position: relative
   color: #000
   font-size: rem(18)
   font-weight: 900
+  @media (max-width: 768px)
+    font-size: rem(16)
 
 .p-total__top-text::before
   content: ''
@@ -50,6 +63,9 @@
   background-size: cover
   background-position: center
   background-repeat: no-repeat
+  @media (max-width: 768px)
+    bottom: rem(-48)
+    left: rem(24)
 
 .p-total__top-text::after
   content: ''
@@ -64,6 +80,9 @@
   background-size: cover
   background-position: center
   background-repeat: no-repeat
+  @media (max-width: 768px)
+    bottom: rem(-48)
+    right: rem(24)
 
 .p-total__cards
   margin-top: rem(30)
@@ -74,12 +93,19 @@
   padding-left: rem(80)
   padding-right: rem(80)
   padding-bottom: rem(40)
+  @media (max-width: 768px)
+    padding-top: rem(16)
+    padding-left: rem(20)
+    padding-right: rem(20)
+    padding-bottom: rem(20)
 
 .p-total__cards-title
   text-align: center
   font-size: rem(35)
   font-weight: 900
   color: #013990
+  @media (max-width: 768px)
+    font-size: rem(24)
 .p-total__cards-title span
   color: #22B8ED
   text-transform: uppercase
@@ -94,12 +120,16 @@
   .p-total__lists
     grid-template-columns: 1fr
     gap: rem(20)
+    margin-top: rem(16)
 
 .p-total__list
 
 .p-total__link
   display: block
   border-radius: rem(20)
+  transition: 0.3s ease-in-out
+  &:hover
+    opacity: 0.7
 
 .p-total__link-top
   display: flex
@@ -111,6 +141,10 @@
   background: #D0F1FF
   border-top-left-radius: rem(20)
   border-top-right-radius: rem(20)
+  @media (max-width: 768px)
+    padding-top: rem(16)
+    padding-bottom: rem(16)
+    gap: rem(10)
   
 .p-total__link-top--maintenance
   background: #FFEFFB
@@ -122,6 +156,8 @@
   color: #000000
   font-size: rem(22)
   font-weight: 700
+  @media (max-width: 768px)
+    font-size: rem(18)
 
 .p-total__link-icon
   width: rem(32)
