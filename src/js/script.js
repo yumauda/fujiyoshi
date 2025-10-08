@@ -6,11 +6,10 @@ $(document).ready(() => {
 });
 
 // ============================================================
-//  first-anim　
+//  first-anim
 // ============================================================
 
 function initFirstAnim() {
-
   //　初回訪問時のみ発火 --------------------
   // const KEY = 'intro_seen_v1';
 
@@ -23,14 +22,17 @@ function initFirstAnim() {
   // localStorage.setItem(KEY, '1'); // 既視フラグを立てる
 
   // 　スクロールの制御 --------------------
-  $('.js-body').addClass('is-fixed');
+  $(".js-body").addClass("is-fixed");
 
   // 親 .js-top__opening 自身の「最後のアニメ」終了で解除
-  $('.js-top__opening.is-active').on('animationend webkitAnimationEnd', function (e) {
-    if (e.target !== this) return; // 親自身のイベント以外無視
-    $(this).remove();
-    $('.js-body').removeClass('is-fixed');
-  });
+  $(".js-top__opening.is-active").on(
+    "animationend webkitAnimationEnd",
+    function (e) {
+      if (e.target !== this) return; // 親自身のイベント以外無視
+      $(this).remove();
+      $(".js-body").removeClass("is-fixed");
+    }
+  );
 }
 
 // ============================================================
@@ -38,19 +40,18 @@ function initFirstAnim() {
 // ============================================================
 
 function initHeader() {
-
   // ヘッダー背景追加（スクロール）
   // ------------------------------
-  $(window).on('scroll', function () {
+  $(window).on("scroll", function () {
     const scroll = $(this).scrollTop();
-    $('.js-header').toggleClass('is-scrolled', scroll > 1);
+    $(".js-header").toggleClass("is-scrolled", scroll > 1);
   });
 
   // ハンバーガーメニュー開閉
   // ------------------------------
-  $('.js-hamburger').on('click', function () {
-    $(this).toggleClass('is-open');
-    $('.js-header__nav').toggleClass('is-open');
+  $(".js-hamburger").on("click", function () {
+    $(this).toggleClass("is-open");
+    $(".js-header__nav").toggleClass("is-open");
   });
 }
 // ============================================================
@@ -60,8 +61,8 @@ function initHeader() {
 function initIntro() {
   var doneSections = []; // 一度スクロールした要素を記録
 
-  $(window).on('scroll', function() {
-    $('.js-intro').each(function() {
+  $(window).on("scroll", function () {
+    $(".js-intro").each(function () {
       var $section = $(this);
 
       // すでに処理済みならスキップ
@@ -74,8 +75,8 @@ function initIntro() {
       if (rect.top <= triggerPoint && rect.bottom > triggerPoint) {
         // スクロール実行
         this.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
+          behavior: "smooth",
+          block: "start",
         });
 
         // 一度だけスクロールさせる
@@ -88,22 +89,37 @@ function initIntro() {
   });
 }
 
-
-
-
-
 // ============================================================
 //  scrollTriger （gsap)
 // ============================================================
 
 function initScrollTriggers() {
   gsap.registerPlugin(ScrollTrigger);
-  document.querySelectorAll('.js-target').forEach((el) => {
+  document.querySelectorAll(".js-target").forEach((el) => {
     ScrollTrigger.create({
       trigger: el,
       start: "top 80%",
       toggleClass: "is-active",
-      once: true
+      once: true,
     });
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeTargets = document.querySelectorAll(".fadein");
+
+  const options = {
+    threshold: 0.1, // 10%見えたら発火
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-active");
+        observer.unobserve(entry.target); // 一度きりでOKならこれ
+      }
+    });
+  }, options);
+
+  fadeTargets.forEach((target) => observer.observe(target));
+});
