@@ -4267,6 +4267,11 @@ body {
   letter-spacing: 0.05em;
 }
 
+@media (max-width: 768px) {
+  .p-number__top-text {
+    font-size: 1.5rem;
+  }
+}
 .p-number__top-text span {
   color: #003990;
 }
@@ -4278,6 +4283,12 @@ body {
   margin-top: 5rem;
 }
 
+@media (max-width: 768px) {
+  .p-number__row {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
 .p-number__block {
   padding-bottom: 2.5rem;
   border-bottom: 1px solid #A0A0A0;
