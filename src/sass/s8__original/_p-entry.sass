@@ -1,0 +1,79 @@
+@charset 'utf-8'
+@use '../s0__global' as *
+@use '../s7__anime/logo' as *
+
+.p-entry
+  padding-top: rem(77)
+  padding-bottom: rem(108)
+  @media (max-width: 768px)
+    padding-top: rem(40)
+    padding-bottom: rem(40)
+
+.p-entry__inner
+  max-width: rem(1170)
+  width: 100%
+  margin-inline: auto
+  padding-left: rem(25)
+  padding-right: rem(25)
+
+.p-entry__content
+
+.p-entry__cards
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: rem(40)
+  @media (max-width: 768px)
+    grid-template-columns: 1fr
+    gap: rem(20)
+
+.p-entry__card
+  background: #fff
+  border-radius: rem(30)
+  padding-right: rem(40)
+  padding-bottom: rem(40)
+  @media (max-width: 768px)
+    padding-right: rem(20)
+    padding-bottom: rem(20)
+.p-entry__card-title
+  font-size: rem(22)
+  font-weight: 700
+  color: #000000
+  letter-spacing: 0.05em
+  background: #FABF15
+  border-top-left-radius: rem(30)
+  border-bottom-right-radius: rem(30)
+  padding: rem(12) rem(30)
+  width: fit-content
+.p-entry__card-text
+  font-size: rem(16)
+  padding-left: rem(40)
+  margin-top: rem(23)
+  font-weight: 500
+  line-height: calc( 24 / 16 )
+  letter-spacing: 0.05em
+  @media (max-width: 768px)
+    padding-left: rem(20)
+    margin-top: rem(16)
+
+.p-entry__img
+  margin-top: rem(40)
+  max-width: rem(239)
+  width: 100%
+  margin-inline: auto
+  display: block
+  @media (max-width: 768px)
+    padding-left: rem(20)
+.p-entry__img img
+  width: 100%
+  height: auto
+  object-fit: cover
+  object-position: center center
+.p-entry__bottom
+  margin-top: rem(20)
+  font-size: rem(16)
+  font-weight: 500
+  text-align: center
+  color: #000
+  @media (max-width: 768px)
+    margin-top: rem(16)
+    padding-left: rem(20)
