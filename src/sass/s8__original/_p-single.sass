@@ -5,6 +5,9 @@
 .p-single
     padding-top: rem(100)
     padding-bottom: rem(100)
+@media (max-width: 768px)
+    .p-single
+        padding-bottom: rem(40)
 
 .p-single__inner
     max-width: rem(1160)
@@ -29,11 +32,17 @@
 @media (max-width: 768px)
     .p-single__left
         max-width: initial
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: rem(20)
 
 .p-single__block
 
 .p-single__block + .p-single__block
     margin-top: rem(40)
+@media (max-width: 768px)
+    .p-single__block + .p-single__block
+        margin-top: initial
 
 .mt100
     margin-top: rem(100) !important
@@ -48,10 +57,13 @@
     height: auto
     object-fit: cover
     object-position: center center
-    border-radius: rem(56)
+    border-radius: rem(30)
 
 .p-single__detail
     margin-top: rem(20)
+@media (max-width: 768px)
+    .p-single__detail
+        margin-top: rem(12)
 
 .p-single__detail-text
     font-size: rem(14)
@@ -63,6 +75,10 @@
     color: #000
     margin-top: rem(10)
     font-weight: 500
+@media (max-width: 768px)
+    .p-single__name
+        font-size: rem(16)
+        margin-top: rem(6)
 
 .p-single__right
     max-width: rem(800)

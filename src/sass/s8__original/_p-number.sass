@@ -5,6 +5,9 @@
 .p-number
   padding-top: rem(60)
   padding-bottom: rem(100)
+  @media (max-width: 768px)
+    padding-top: rem(40)
+    padding-bottom: rem(40)
 
 .p-number__inner
   max-width: rem(1170)
@@ -51,6 +54,7 @@
 @media (max-width: 768px)
   .p-number__row
     grid-template-columns: 1fr
+    margin-top: rem(40)
     gap: rem(20)
 
 .p-number__column

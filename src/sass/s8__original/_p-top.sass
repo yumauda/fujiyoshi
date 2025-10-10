@@ -424,6 +424,10 @@ body
   background: url(../../assets/img/top/bottom_1.png)
   background-size: cover
   border-radius: rem(30)
+  @media (max-width: 768px)
+    height: rem(140)
+    gap: rem(12)
+    border-radius: rem(20)
 
   &__icon svg
     width: 100%
@@ -566,3 +570,10 @@ body
   display: none
   @media (max-width: 768px)
     display: block
+
+.p-about-card__icon
+  width: rem(36)
+  display: inline-block
+@media (max-width: 768px)
+  .p-about-card__icon
+    width: rem(24)

@@ -1,0 +1,29 @@
+@charset 'utf-8'
+@use '../s0__global' as *
+@use '../s7__anime/logo' as *
+
+
+.p-question
+  padding-top: rem(47)
+  padding-bottom: rem(100)
+  @media (max-width: 768px)
+    padding-top: rem(40)
+    padding-bottom: rem(40)
+
+.p-question__inner
+  max-width: rem(1160)
+  width: 100%
+  margin-inline: auto
+  padding-left: rem(20)
+  padding-right: rem(20)
+
+.p-question__title
+  font-size: rem(24)
+  font-weight: 700
+  color: #000
+  margin-bottom: rem(40)
+
+.p-question__block + .p-question__block
+  margin-top: rem(60)
+  @media (max-width: 768px)
+    margin-top: rem(40)

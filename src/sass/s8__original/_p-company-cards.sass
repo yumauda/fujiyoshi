@@ -5,6 +5,9 @@
 .p-company-cards
   padding-top: rem(100)
   padding-bottom: rem(100)
+  @media (max-width: 768px)
+    padding-top: rem(40)
+    padding-bottom: rem(40)
 
 .p-company-cards__inner
   max-width: rem(1240)
@@ -17,6 +20,9 @@
   display: grid
   grid-template-columns: repeat(2, 1fr)
   gap: rem(40)
+  @media (max-width: 768px)
+    grid-template-columns: 1fr
+    gap: rem(20)
 
 .p-company-cards__list
 
@@ -29,6 +35,14 @@
   height: rem(230)
   border-radius: rem(30)
   background: #E4F3FA
+  @media (max-width: 768px)
+    flex-direction: column
+    padding-left: rem(20)
+    padding-right: rem(20)
+    padding-top: rem(20)
+    padding-bottom: rem(20)
+    height: initial
+    border-radius: rem(20)
 
 .p-company-cards__detail
 
@@ -36,15 +50,22 @@
   display: flex
   align-items: center
   gap: rem(12)
+  @media (max-width: 768px)
+    gap: rem(10)
+    justify-content: center
 
 .p-company-cards__title
   color: #000000
   font-size: rem(22)
   font-weight: 700
   letter-spacing: 0.05em
+  @media (max-width: 768px)
+    font-size: rem(18)
 
 .p-company-cards__icon
   width: rem(32)
+  @media (max-width: 768px)
+    width: rem(24)
 
 .p-company-cards__icon svg
   width: 100%
@@ -59,14 +80,24 @@
   font-weight: 500
   line-height: 1.5
   letter-spacing: 0.05em
+  @media (max-width: 768px)
+    font-size: rem(14)
+    margin-top: rem(16)
 
 .p-company-cards__img
   max-width: rem(139)
   width: 100%
+  @media (max-width: 768px)
+    max-width: rem(100)
+    margin-top: rem(16)
 .p-company-cards__img--2
   max-width: rem(100)
+  @media (max-width: 768px)
+    max-width: rem(80)
 .p-company-cards__img--2
   max-width: rem(110)
+  @media (max-width: 768px)
+    max-width: rem(80)
 
 .p-company-cards__img img
   width: 100%

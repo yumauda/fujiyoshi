@@ -96,6 +96,9 @@
                 color: $bl
             span.-r-bl
                 color: $r-bl
+            span.-excl
+                display: inline-block
+                padding: 0 rem(8)
             p
                 line-height: 2
                 font-size: rem(16)
@@ -224,6 +227,7 @@
         &__excl-gr
             position: relative
             height: rem(440)
+            margin-top: rem(80)
             @media screen and (max-width: $breakpoint) and (orientation: portrait)
                 height: rem(288)
         &__excl
@@ -328,9 +332,9 @@
                     flex-direction: column
                     gap: rem(48)
             &__box
+                display: block
                 position: relative
                 border-radius: rem(16)
-                cursor: pointer
                 height: 100%
                 &.-bl
                     background-color: #c5e9f8
@@ -557,6 +561,8 @@
             @media screen and (max-width: $breakpoint) and (orientation: portrait)
                 width: rem(200)
         &__txt
+            span
+                padding: 0 rem(4)
             @media screen and (max-width: $breakpoint) and (orientation: portrait)
                 padding: 0 rem(20)
         &__excl

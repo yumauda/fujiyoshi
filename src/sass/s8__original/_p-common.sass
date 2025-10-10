@@ -31,7 +31,7 @@
 @media (max-width: 768px)
   .p-page-mv__img img
     border-radius: rem(20)
-    aspect-ratio: 375 / 210
+    aspect-ratio: 375 / 280
 
 .p-page-mv__title-wrapper
   display: flex
@@ -84,6 +84,13 @@
   border-radius: rem(20)
   padding-top: rem(25)
   padding-bottom: rem(25)
+@media (max-width: 768px)
+  .p-page-mv__link
+    padding-top: rem(12)
+    padding-bottom: rem(12)
+    gap: rem(10)
+    border-radius: rem(10)
+
 
 .p-page-mv__link--maintenance
   background: #FFEFFB
@@ -95,6 +102,9 @@
   color: #000000
   font-size: rem(22)
   font-weight: 700
+@media (max-width: 768px)
+  .p-page-mv__link-text
+    font-size: rem(18)
 
 .p-page-mv__title
   color: #fff
@@ -201,3 +211,17 @@
 .fadein.is-active
   opacity: 1
   transform: translateY(0)
+
+.p-page-mv__link-icon
+  display: inline-block
+  width: rem(32)
+@media (max-width: 768px)
+  .p-page-mv__link-icon
+    width: rem(24)
+
+.p-page-mv__link-icon svg
+  width: 100%
+  height: auto
+  object-fit: cover
+  object-position: center center
+
