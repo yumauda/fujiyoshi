@@ -38,6 +38,7 @@
 
 @media (max-width: 768px)
   .p-training__list
+    border-radius: rem(20)
     padding-right: rem(40)
     padding-top: rem(20)
     padding-bottom: rem(20)
@@ -58,6 +59,10 @@
   background: #FABF15
   border-top-left-radius: rem(30)
   border-bottom-right-radius: rem(30)
+@media (max-width: 768px)
+  .p-training__list::before
+    border-top-left-radius: rem(20)
+    border-bottom-right-radius: rem(20)
 
 .p-training__list--red::before
   content: attr(data-number)
@@ -75,6 +80,10 @@
   background: #E36EA4
   border-top-left-radius: rem(30)
   border-bottom-right-radius: rem(30)
+@media (max-width: 768px)
+  .p-training__list--red::before
+    border-top-left-radius: rem(20)
+    border-bottom-right-radius: rem(20)
 
 .p-training__title
   font-size: rem(18)

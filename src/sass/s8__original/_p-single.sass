@@ -7,6 +7,7 @@
     padding-bottom: rem(100)
 @media (max-width: 768px)
     .p-single
+        padding-top: rem(50)
         padding-bottom: rem(40)
 
 .p-single__inner
@@ -140,9 +141,14 @@
 @media (max-width: 768px)
     .p-single__blue
         flex-direction: column
+        padding-top: rem(24)
+        padding-bottom: rem(24)
+        gap: rem(24)
 .p-single__blue-img
     max-width: rem(120)
     width: 100%
+    @media (max-width: 768px)
+        max-width: rem(80)
 
 .p-single__blue-img
 .p-single__blue-img img
@@ -221,6 +227,10 @@
     left: 50%
     transform: translateX(-50%)
     top: rem(-13)
+    @media (max-width: 768px)
+        width: rem(6)
+        height: rem(6)
+        top: rem(-10)
 
 .p-single__block-dot--orange::before
     content: ''
@@ -232,3 +242,7 @@
     left: 50%
     transform: translateX(-50%)
     top: rem(-13)
+    @media (max-width: 768px)
+        width: rem(6)
+        height: rem(6)
+        top: rem(-10)
