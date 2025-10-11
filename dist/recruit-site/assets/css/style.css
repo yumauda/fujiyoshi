@@ -4951,6 +4951,10 @@ body {
   object-position: center center;
 }
 
+.p-qa__block + .p-qa__block {
+  margin-top: 3.75rem;
+}
+
 .p-qa__title-wrapper {
   text-align: center;
 }
@@ -4968,13 +4972,39 @@ body {
 .p-qa__icon {
   display: inline-block;
   width: 3.75rem;
+  height: 3.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #36CD9C;
+  border-top-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+}
+@media (max-width: 768px) {
+  .p-qa__icon {
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+  }
 }
 
-.p-qa__icon img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  object-position: center center;
+.p-qa__icon--answer {
+  background: #E36EA4;
+}
+
+.p-qa__en {
+  text-transform: uppercase;
+  font-size: 1.625rem;
+  color: #fff;
+  font-weight: 500;
+  font-family: "Oswald", sans-serif;
+}
+@media (max-width: 768px) {
+  .p-qa__en {
+    font-size: 1.25rem;
+  }
 }
 
 .p-qa__summary {
@@ -4987,6 +5017,12 @@ body {
   display: flex;
   align-items: center;
   gap: 1.25rem;
+}
+@media (max-width: 768px) {
+  .p-qa__summary {
+    gap: 1rem;
+    align-items: initial;
+  }
 }
 
 .p-qa__summary::before {
@@ -5029,6 +5065,7 @@ body {
   color: #000;
   line-height: 1.8461538462;
   letter-spacing: 0.05em;
+  padding-right: 3.5rem;
 }
 
 .p-qa__ttl span {
@@ -5038,23 +5075,34 @@ body {
 
 .p-qa__inner {
   overflow: hidden;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
 }
 
 .p-qa__wrap {
-  padding-top: 1.125rem;
-  padding-bottom: 1.125rem;
+  margin-top: 1.25rem;
+  background: #fff;
+  border-radius: 1.875rem;
 }
 
 .p-qa__txt {
   font-size: 1rem;
   font-weight: 500;
   position: relative;
-  color: #696969;
-  line-height: 1.8461538462;
+  color: #000000;
+  line-height: 1.5;
   letter-spacing: 0.065em;
   position: relative;
+  padding-left: 1.25rem;
+  padding-top: 0.5rem;
+}
+@media (max-width: 768px) {
+  .p-qa__txt {
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.p-qa__answer {
+  display: flex;
 }
 
 .p-question {

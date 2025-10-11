@@ -2,100 +2,125 @@
 @use '../s0__global' as *
 @use '../s7__anime/logo' as *
 
+.p-qa__block + .p-qa__block
+  margin-top: rem(60)
 
 .p-qa__title-wrapper
-  text-align: center;
+  text-align: center
 
 .p-qa__content + .p-qa__content
   margin-top: rem(10)
 
-.p-qa__title 
-  color: #696969;
-  font-size: rem(26);
-  letter-spacing: 0.065em;
+.p-qa__title
+  color: #696969
+  font-size: rem(26)
+  letter-spacing: 0.065em
 .p-qa__icon
   display: inline-block
   width: rem(60)
+  height: rem(60)
+  display: flex
+  align-items: center
+  justify-content: center
+  background: #36CD9C
+  border-top-left-radius: 9999px
+  border-bottom-right-radius: 9999px
+  border-bottom-left-radius: 9999px
+  @media (max-width: 768px)
+    min-width: rem(40)
+    min-height: rem(40)
+    max-width: rem(40)
+    max-height: rem(40)
 
-.p-qa__icon img
-  width: 100%
-  height: auto
-  object-fit: cover
-  object-position: center center
+.p-qa__icon--answer
+  background: #E36EA4
 
-.p-qa__summary 
-  color: #fff;
+.p-qa__en
+  text-transform: uppercase
+  font-size: rem(26)
+  color: #fff
+  font-weight: 500
+  font-family: "Oswald", sans-serif
+  @media (max-width: 768px)
+    font-size: rem(20)
+.p-qa__summary
+  color: #fff
   background: #E4F3FA
   border-radius: 9999px
-  cursor: pointer;
-  position: relative;
-  list-style: none;
+  cursor: pointer
+  position: relative
+  list-style: none
   display: flex
   align-items: center
   gap: rem(20)
+  @media (max-width: 768px)
+    gap: rem(16)
+    align-items: initial
 
-.p-qa__summary::before 
-  content: "";
-  display: inline-block;
-  width: rem(19);
-  height: rem(4);
-  background: #013990;
-  transform: translateY(-50%) rotate(90deg);
-  position: absolute;
-  top: 50%;
-  right: rem(30);
-  transition: all 0.3s ease-out;
+.p-qa__summary::before
+  content: ""
+  display: inline-block
+  width: rem(19)
+  height: rem(4)
+  background: #013990
+  transform: translateY(-50%) rotate(90deg)
+  position: absolute
+  top: 50%
+  right: rem(30)
+  transition: all 0.3s ease-out
   border-radius: 9999px
 
-.p-qa__summary::after 
-  content: "";
-  display: inline-block;
-  width: rem(19);
-  height: rem(4);
-  background: #013990;
-  transform: translateY(-50%);
-  position: absolute;
-  top: 50%;
-  right: rem(30);
-  transition: all 0.3s ease-out;
+.p-qa__summary::after
+  content: ""
+  display: inline-block
+  width: rem(19)
+  height: rem(4)
+  background: #013990
+  transform: translateY(-50%)
+  position: absolute
+  top: 50%
+  right: rem(30)
+  transition: all 0.3s ease-out
   border-radius: 9999px
 
-.p-qa__summary.is-opened::before 
-  transform: rotate(0deg) translateY(-50%);
-  top: 50%;
+.p-qa__summary.is-opened::before
+  transform: rotate(0deg) translateY(-50%)
+  top: 50%
 
+.p-qa__ttl
+  font-size: rem(16)
+  font-weight: 700
+  position: relative
+  color: #000
+  line-height: calc(24 / 13)
+  letter-spacing: 0.05em
+  padding-right: rem(56)
 
-.p-qa__ttl 
-  font-size: rem(16);
-  font-weight: 700;
-  position: relative;
-  color: #000;
-  line-height: calc(24 / 13);
-  letter-spacing: 0.05em;
+.p-qa__ttl span
+  font-weight: 500
+  font-size: rem(14)
 
+.p-qa__inner
+  overflow: hidden
 
-.p-qa__ttl span 
-  font-weight: 500;
-  font-size: rem(14);
+.p-qa__wrap
+  margin-top: rem(20)
+  background: #fff
+  border-radius: rem(30)
 
+.p-qa__txt
+  font-size: rem(16)
+  font-weight: 500
+  position: relative
+  color: #000000
+  line-height: calc(24 / 16)
+  letter-spacing: 0.065em
+  position: relative
+  padding-left: rem(20)
+  padding-top: rem(8)
+  @media (max-width: 768px)
+    padding-bottom: rem(16)
+    padding-right: rem(16)
 
-
-.p-qa__inner 
-  overflow: hidden;
-  padding-right: rem(24);
-  padding-left: rem(24);
-
-
-.p-qa__wrap 
-  padding-top: rem(18);
-  padding-bottom: rem(18);
-
-.p-qa__txt 
-  font-size: rem(16);
-  font-weight: 500;
-  position: relative;
-  color: #696969;
-  line-height: calc(24 / 13);
-  letter-spacing: 0.065em;
-  position: relative;
-
+.p-qa__answer
+  display: flex
