@@ -128,7 +128,8 @@
   display: block
   border-radius: rem(20)
   transition: 0.3s ease-in-out
-
+  @media (max-width: 768px)
+    position: relative
 .p-total__link-top
   display: flex
   align-items: center
@@ -143,7 +144,7 @@
     padding-top: rem(16)
     padding-bottom: rem(16)
     gap: rem(10)
-  
+
 .p-total__link-top--maintenance
   background: #FFEFFB
 
@@ -177,8 +178,11 @@
   background-position: center
   background-repeat: no-repeat
   position: relative
-  
-.p-total__list-titleWrapper::before 
+  @media (max-width: 768px)
+    border-bottom-left-radius: rem(20)
+    border-bottom-right-radius: rem(20)
+
+.p-total__list-titleWrapper::before
   position: absolute
   content: ''
   width: 100%
@@ -192,7 +196,6 @@
 
 .p-total__link:hover .p-total__list-titleWrapper::before
   opacity: 1
-
 
 .p-total__list-titleWrapper--maintenance
   background: url(../../assets/img/job_all/total_bg2.png)
@@ -215,6 +218,25 @@
   transition: 0.3s ease-in-out
   position: relative
   z-index: 2
+  @media (max-width: 768px)
+    visibility: visible
+    opacity: 1
+    position: absolute
+    bottom: 0
+    padding-top: rem(13)
+    padding-bottom: rem(27)
+    background: #D0F1FF
+    border-bottom-left-radius: rem(20)
+    border-bottom-right-radius: rem(20)
+    width: 100%
+    color: #000
+    font-size: rem(14)
+.p-total__list-title--maintenance
+  @media (max-width: 768px)
+    background: #FFEFFB
+.p-total__list-title--environment
+  @media (max-width: 768px)
+    background: #E4FCEB
 
 .p-total__link:hover .p-total__list-title
   opacity: 1
@@ -250,7 +272,7 @@
 
 .p-total__bottom-blue
   color: #fff
-  background: #013990 
+  background: #013990
   border-radius: 9999px
   font-size: rem(14)
   padding-top: rem(6)
