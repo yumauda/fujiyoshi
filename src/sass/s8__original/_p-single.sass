@@ -59,6 +59,8 @@
     object-fit: cover
     object-position: center center
     border-radius: rem(30)
+    @media (max-width: 768px)
+        border-radius: rem(20)
 
 .p-single__detail
     margin-top: rem(20)
@@ -109,7 +111,6 @@
 
 @media (max-width: 768px)
     .p-single__text
-        font-size: rem(14)
 
 .p-single__text + .p-single__text
     margin-top: rem(40)
@@ -141,6 +142,7 @@
 @media (max-width: 768px)
     .p-single__blue
         flex-direction: column
+        border-radius: rem(20)
         padding-top: rem(24)
         padding-bottom: rem(24)
         gap: rem(24)
@@ -203,6 +205,11 @@
     letter-spacing: 0.05em
     font-weight: 900
     line-height: 1.4
+    transition: 0.3s ease-in-out
+
+.p-single__bottom-link:hover
+    .p-single__bottom-linkText
+        color: rgba(34, 184, 237, 0.7)
 
 .p-single__bottom-icon
     width: rem(32)

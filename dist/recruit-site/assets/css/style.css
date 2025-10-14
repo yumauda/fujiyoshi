@@ -639,7 +639,7 @@ body figure {
     position: absolute;
     top: 0;
     right: 0;
-    width: 56vw;
+    width: 53vw;
     height: 0;
     background-color: #ffffff;
     z-index: -5;
@@ -3090,6 +3090,11 @@ body {
   object-fit: cover;
   object-position: center center;
 }
+@media (max-width: 768px) {
+  .p-about-expertise__img img {
+    border-radius: 1.25rem;
+  }
+}
 .p-about-expertise__visual {
   margin-top: 60px;
   padding: 60px 40px;
@@ -3530,6 +3535,7 @@ body {
   border-radius: 1.25rem;
   padding-top: 1.5625rem;
   padding-bottom: 1.5625rem;
+  transition: 0.3s ease-in-out;
 }
 
 @media (max-width: 768px) {
@@ -3546,6 +3552,10 @@ body {
 
 .p-page-mv__link--environment {
   background: #E4FCEB;
+}
+
+.p-page-mv__link:hover {
+  background: rgba(34, 184, 237, 0.7);
 }
 
 .p-page-mv__link-text {
@@ -4154,6 +4164,11 @@ body {
   object-position: center center;
   border-radius: 1.875rem;
 }
+@media (max-width: 768px) {
+  .p-single__img img {
+    border-radius: 1.25rem;
+  }
+}
 
 .p-single__detail {
   margin-top: 1.25rem;
@@ -4218,11 +4233,6 @@ body {
   font-weight: 500;
 }
 
-@media (max-width: 768px) {
-  .p-single__text {
-    font-size: 0.875rem;
-  }
-}
 .p-single__text + .p-single__text {
   margin-top: 2.5rem;
 }
@@ -4262,6 +4272,7 @@ body {
 @media (max-width: 768px) {
   .p-single__blue {
     flex-direction: column;
+    border-radius: 1.25rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     gap: 1.5rem;
@@ -4338,6 +4349,11 @@ body {
   letter-spacing: 0.05em;
   font-weight: 900;
   line-height: 1.4;
+  transition: 0.3s ease-in-out;
+}
+
+.p-single__bottom-link:hover .p-single__bottom-linkText {
+  color: rgba(34, 184, 237, 0.7);
 }
 
 .p-single__bottom-icon {
