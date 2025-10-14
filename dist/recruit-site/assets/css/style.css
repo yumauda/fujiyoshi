@@ -3882,7 +3882,7 @@ body {
 
 .p-total__list-titleWrapper {
   text-align: center;
-  height: 22.5rem;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3891,6 +3891,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  aspect-ratio: 320/360;
+  object-fit: cover;
 }
 @media (max-width: 768px) {
   .p-total__list-titleWrapper {
@@ -4370,6 +4372,8 @@ body {
   height: 14.375rem;
   border-radius: 1.875rem;
   background: #E4F3FA;
+  transition: 0.3s ease-in-out;
+  gap: 1rem;
 }
 @media (max-width: 768px) {
   .p-company-cards__link {
@@ -4381,6 +4385,10 @@ body {
     height: initial;
     border-radius: 1.25rem;
   }
+}
+
+.p-company-cards__link:hover {
+  background: rgba(34, 184, 237, 0.7);
 }
 
 .p-company-cards__top {
@@ -4428,7 +4436,7 @@ body {
   margin-top: 1.25rem;
   font-size: 1rem;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.8;
   letter-spacing: 0.05em;
 }
 @media (max-width: 768px) {
@@ -4439,7 +4447,7 @@ body {
 }
 
 .p-company-cards__img {
-  max-width: 8.6875rem;
+  max-width: 6rem;
   width: 100%;
 }
 @media (max-width: 768px) {
@@ -4450,16 +4458,7 @@ body {
 }
 
 .p-company-cards__img--2 {
-  max-width: 6.25rem;
-}
-@media (max-width: 768px) {
-  .p-company-cards__img--2 {
-    max-width: 5rem;
-  }
-}
-
-.p-company-cards__img--2 {
-  max-width: 6.875rem;
+  max-width: 5rem;
 }
 @media (max-width: 768px) {
   .p-company-cards__img--2 {
@@ -4474,6 +4473,33 @@ body {
   object-position: center center;
 }
 
+@keyframes card-bounce-y {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-0.75rem);
+  }
+  70% {
+    transform: translateY(0);
+  }
+}
+.p-company-cards__link .p-company-cards__img,
+.p-company-cards__link .p-company-cards__img img {
+  will-change: transform;
+  transform-origin: center bottom;
+  display: inline-block;
+}
+.p-company-cards__link:hover .p-company-cards__img img, .p-company-cards__link:focus-visible .p-company-cards__img img {
+  animation: card-bounce-y 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) 1 forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .p-company-cards__link:hover .p-company-cards__img img,
+  .p-company-cards__link:focus-visible .p-company-cards__img img {
+    animation: none;
+  }
+}
 .p-number {
   padding-top: 3.75rem;
   padding-bottom: 6.25rem;
