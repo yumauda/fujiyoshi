@@ -12,6 +12,8 @@ body
 // About Section (水処理が持続可能な社会を支える)
 .p-about-section
   padding: rem(110) 0
+  position: relative
+  z-index: 3
 
   &__inner
     max-width: 1040px
@@ -47,6 +49,8 @@ body
 // About Solution (水処理のトータルソリューション)
 .p-about-solution
   padding-bottom: rem(117)
+  position: relative
+  z-index: 3
 
   &__inner
     max-width: rem(1040)
@@ -394,6 +398,8 @@ body
 .p-about-cards
   padding-top: rem(80)
   padding-bottom: rem(80)
+  position: relative
+  z-index: 3
   margin-bottom: rem(100)
   background: #E4F1FA
 
@@ -577,3 +583,16 @@ body
 @media (max-width: 768px)
   .p-about-card__icon
     width: rem(24)
+.p-bg--environment
+  position: relative
+  z-index: 2
+
+.p-bg--environment::before
+  position: absolute
+  z-index: -1
+  content: ""
+  top: rem(-200)
+  left: 0px
+  width: 100vw
+  height: 200vh
+  background: linear-gradient(0deg, rgb(255, 255, 255) 45%, rgba(255, 255, 255, 0) 100%)
