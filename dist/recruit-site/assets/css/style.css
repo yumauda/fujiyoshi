@@ -3434,6 +3434,12 @@ body {
     aspect-ratio: 375/280;
   }
 }
+@media (max-width: 768px) {
+  .p-page-mv__img--qa img {
+    aspect-ratio: 375/280;
+    object-position: 29% 80%;
+  }
+}
 .p-page-mv__title-wrapper {
   display: flex;
   align-items: center;
@@ -5135,6 +5141,12 @@ body {
   padding-right: 3.5rem;
 }
 
+@media (max-width: 768px) {
+  .p-qa__ttl {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
 .p-qa__ttl span {
   font-weight: 500;
   font-size: 0.875rem;
