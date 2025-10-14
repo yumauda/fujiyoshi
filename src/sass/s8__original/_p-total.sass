@@ -141,6 +141,8 @@
   border-top-left-radius: rem(20)
   border-top-right-radius: rem(20)
   @media (max-width: 768px)
+    position: relative
+    text-align: center
     padding-top: rem(16)
     padding-bottom: rem(16)
     gap: rem(10)
@@ -156,10 +158,17 @@
   font-size: rem(22)
   font-weight: 700
   @media (max-width: 768px)
+    text-align: center
     font-size: rem(18)
 
 .p-total__link-icon
   width: rem(32)
+  @media (max-width: 768px)
+    width: rem(24)
+    position: absolute
+    top: 50%
+    right: rem(24)
+    transform: translateY(-50%)
 
 .p-total__link-icon svg
   width: 100%
