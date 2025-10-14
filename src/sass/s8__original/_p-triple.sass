@@ -39,13 +39,13 @@
   border-radius: rem(30)
   @media (max-width: 768px)
     height: rem(120)
+    border-radius: rem(20)
 
 .p-triple__link--environment
   background: url(../../assets/img/entry/bg_environment.png)
   background-size: cover
   background-position: center
   background-repeat: no-repeat
-
 
 .p-triple__link--work
   background: url(../../assets/img/entry/bg_work.png)
@@ -66,7 +66,7 @@
   line-height: calc( 39 / 26 )
   width: fit-content
   @media (max-width: 768px)
-    font-size: rem(22)
+    font-size: rem(18)
     line-height: calc( 33 / 22 )
 .p-triple__icon
   min-width: rem(36)
@@ -74,13 +74,19 @@
   max-width: rem(36)
   max-height: rem(36)
   @media (max-width: 768px)
+    margin-top: rem(-6)
     min-width: rem(24)
     min-height: rem(24)
     max-width: rem(24)
     max-height: rem(24)
 
 .p-triple__icon svg
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  object-position: center center;
+  width: 100%
+  height: auto
+  object-fit: cover
+  object-position: center center
+
+.pc-only
+  display: block
+  @media (max-width: 768px)
+    display: none
