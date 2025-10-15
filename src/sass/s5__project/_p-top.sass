@@ -2,6 +2,8 @@
 @use '../s0__global' as *
 
 .p-top
+    position: relative
+    z-index: 3
     .l-section__wrap
         padding: rem(88) 0
         @media screen and (max-width: $breakpoint) and (orientation: portrait)
@@ -13,8 +15,8 @@
         overflow: hidden
         transform: translateY(0%)
         z-index: $z-index__opening
-        touch-action: none  // 指のドラッグでのスクロール抑止
-        overscroll-behavior: contain  // バウンスやプルリフ防止
+        touch-action: none // 指のドラッグでのスクロール抑止
+        overscroll-behavior: contain // バウンスやプルリフ防止
         &__wrap
             width: 100vw
             height: 100vh
@@ -65,13 +67,16 @@
         &::before
             position: absolute
             content: ''
-            top: 0
             left: 0
+            top: 0
             width: 100vw
             height: 100%
             background: linear-gradient(0deg, rgba(255, 255, 255, 1) 45%, rgba(255, 255, 255, 0) 100%)
+            z-index: -1
             @media screen and (max-width: $breakpoint) and (orientation: portrait)
+                top: -60%
                 background: linear-gradient(0deg,rgba(255, 255, 255, 1) 45%, rgba(255, 255, 255, .7) 85%, rgba(255, 255, 255, 0) 100%)
+                height: 300vh
         &__wrap
             display: flex
             justify-content: space-between

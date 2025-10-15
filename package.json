@@ -9,7 +9,7 @@
     "build:sass": "sass src/sass/style.sass dist/recruit-site/assets/css/style.css --style=expanded --source-map",
     "watch": "npm run watch:sass",
     "watch:sass": "sass src/sass/style.sass dist/recruit-site/assets/css/style.css --style=expanded --source-map --watch",
-    "dev": "concurrently \"npm run watch:sass\" \"live-server dist/recruit-site --port=3000\""
+    "dev": "concurrently \"npm run watch:sass\" \"live-server dist --port=3000\""
   },
   "keywords": [],
   "author": "",

@@ -71,6 +71,11 @@ body
     height: auto
     object-fit: cover
     object-position: center center
+    border-radius: rem(30)
+    border: 1px solid #CECECE
+
+    @media (max-width: 768px)
+      border-radius: rem(20)
 
   &__text
     font-size: rem(16)
@@ -271,6 +276,8 @@ body
 .p-about-expertise
   padding-bottom: rem(117)
   background: #fff
+  position: relative
+  z-index: 3
 
   &__title
     font-size: rem(32)
@@ -598,3 +605,5 @@ body
   width: 100vw
   height: 200vh
   background: linear-gradient(0deg, rgb(255, 255, 255) 45%, rgba(255, 255, 255, 0) 100%)
+  @media (max-width: 768px)
+    height: 400vh
