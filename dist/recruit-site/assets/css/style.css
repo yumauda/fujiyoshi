@@ -3490,12 +3490,12 @@ body {
 @media (max-width: 768px) {
   .p-page-mv__img img {
     border-radius: 1.25rem;
-    aspect-ratio: 375/280;
+    aspect-ratio: 375/190;
   }
 }
 @media (max-width: 768px) {
   .p-page-mv__img--qa img {
-    aspect-ratio: 375/280;
+    aspect-ratio: 375/190;
     object-position: 29% 80%;
   }
 }
@@ -4532,6 +4532,12 @@ body {
   background: rgba(34, 184, 237, 0.7);
 }
 
+@media (max-width: 768px) {
+  .p-company-cards__detail {
+    width: 100%;
+  }
+}
+
 .p-company-cards__top {
   display: flex;
   align-items: center;
@@ -4540,7 +4546,7 @@ body {
 @media (max-width: 768px) {
   .p-company-cards__top {
     gap: 0.625rem;
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 
