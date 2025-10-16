@@ -2,15 +2,15 @@
 @use '../s0__global' as *
 @use '../s7__anime/logo' as *
 
-.p-page-mv
+.p-common
   padding-top: rem(210)
   position: relative
   z-index: 3
 @media (max-width: 768px)
-  .p-page-mv
+  .p-common
     padding-top: rem(100)
 
-.p-page-mv__inner
+.p-common__inner
   max-width: rem(1240)
   padding-left: rem(20)
   padding-right: rem(20)
@@ -18,71 +18,71 @@
   margin-left: auto
   margin-right: auto
 
-.p-page-mv__img
+.p-common__img
   margin-top: rem(50)
 @media (max-width: 768px)
-  .p-page-mv__img
+  .p-common__img
     margin-top: rem(40)
 
-.p-page-mv__img img
+.p-common__img img
   width: 100%
   height: auto
   object-fit: cover
   object-position: center center
   border-radius: rem(30)
 @media (max-width: 768px)
-  .p-page-mv__img img
+  .p-common__img img
     border-radius: rem(20)
     aspect-ratio: 375 / 190
 
 @media (max-width: 768px)
-  .p-page-mv__img--qa img
+  .p-common__img--qa img
     aspect-ratio: 375 / 190
     object-position: 29% 80%
 
-.p-page-mv__title-wrapper
+.p-common__title-wrapper
   display: flex
   align-items: center
   gap: rem(30)
 
-.p-page-mv__ttl
+.p-common__ttl
   width: fit-content
   display: inline-block
   font-size: rem(42)
   color: #000000
   font-weight: 700
 @media (max-width: 768px)
-  .p-page-mv__ttl
+  .p-common__ttl
     font-size: rem(24)
 
-.p-page-mv__text-wrapper
+.p-common__text-wrapper
   margin-top: rem(60)
   max-width: rem(1040)
   width: 100%
   margin-inline: auto
 
-.p-page-mv__text
+.p-common__text
   font-size: rem(16)
   color: #000000
   font-weight: 500
   line-height: 2
   letter-spacing: 0.05em
 
-.p-page-mv__lists
+.p-common__lists
   display: grid
   grid-template-columns: repeat(3, 1fr)
   gap: rem(15)
   margin-top: rem(60)
 
 @media (max-width: 768px)
-  .p-page-mv__lists
+  .p-common__lists
     grid-template-columns: 1fr
     margin-top: rem(40)
     gap: rem(10)
 
-.p-page-mv__list
+.p-common__list
 
-.p-page-mv__link
+.p-common__link
   display: flex
   align-items: center
   justify-content: center
@@ -93,31 +93,31 @@
   padding-bottom: rem(25)
   transition: 0.3s ease-in-out
 @media (max-width: 768px)
-  .p-page-mv__link
+  .p-common__link
     padding-top: rem(12)
     padding-bottom: rem(12)
     gap: rem(10)
     border-radius: rem(10)
 
 
-.p-page-mv__link--maintenance
+.p-common__link--maintenance
   background: #FFEFFB
 
-.p-page-mv__link--environment
+.p-common__link--environment
   background: #E4FCEB
 
-.p-page-mv__link:hover
+.p-common__link:hover
   background: rgba(34, 184, 237, 0.7)
 
-.p-page-mv__link-text
+.p-common__link-text
   color: #000000
   font-size: rem(22)
   font-weight: 700
 @media (max-width: 768px)
-  .p-page-mv__link-text
+  .p-common__link-text
     font-size: rem(18)
 
-.p-page-mv__title
+.p-common__title
   color: #fff
   background: #1191BE
   border-top-left-radius: rem(30)
@@ -138,7 +138,7 @@
   z-index: 1
 
 @media (max-width: 768px)
-  .p-page-mv__title
+  .p-common__title
     font-size: rem(20)
     padding-top: rem(20)
     padding-bottom: rem(20)
@@ -146,20 +146,20 @@
     padding-right: rem(20)
     margin-top: rem(-20)
 
-.p-page-mv__title--maintenance
+.p-common__title--maintenance
   background: rgba($color: #B45D85, $alpha: 0.9)
-.p-page-mv__title--maintenance2
+.p-common__title--maintenance2
   background: rgba($color: #689645, $alpha: 0.9)
-.p-page-mv__strong
+.p-common__strong
   width: rem(52)
-.p-page-mv__strong img
+.p-common__strong img
   width: 100%
   height: auto
   object-fit: cover
   object-position: center center
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1))
 
-.p-page-mv__subTitle-wrapper
+.p-common__subTitle-wrapper
   position: relative
   z-index: 1
   display: flex
@@ -175,31 +175,31 @@
   margin-top: rem(-56)
 
 @media (max-width: 768px)
-  .p-page-mv__subTitle-wrapper
+  .p-common__subTitle-wrapper
     padding: rem(12) rem(40)
     margin-top: rem(-40)
 
-.p-page-mv__subTitle
+.p-common__subTitle
   color: #000
   font-size: rem(32)
   font-weight: 700
 
 @media (max-width: 768px)
-  .p-page-mv__subTitle
+  .p-common__subTitle
     font-size: rem(20)
 
-.p-page-mv__icon
+.p-common__icon
   width: rem(72)
   display: inline-block
-.p-page-mv__icon--training
+.p-common__icon--training
   width: rem(60)
-.p-page-mv__icon img
+.p-common__icon img
   width: 100%
   height: auto
   object-fit: cover
   object-position: center center
 
-.p-page-mv__introduce-wrapper
+.p-common__introduce-wrapper
   margin-top: rem(40)
   max-width: rem(1170)
   width: 100%
@@ -207,7 +207,7 @@
   padding-left: rem(25)
   padding-right: rem(25)
 
-.p-page-mv__introduce-text
+.p-common__introduce-text
   font-size: rem(18)
   color: #000000
   font-weight: 700
@@ -223,23 +223,24 @@
   opacity: 1
   transform: translateY(0)
 
-.p-page-mv__link-icon
+.p-common__link-icon
   display: inline-block
   width: rem(32)
 @media (max-width: 768px)
-  .p-page-mv__link-icon
+  .p-common__link-icon
     width: rem(24)
 
-.p-page-mv__link-icon svg
+.p-common__link-icon svg
   width: 100%
   height: auto
   object-fit: cover
   object-position: center center
 
-.p-page-mv__entry
+.p-common__entry
   font-size: rem(22)
   color: #000
   font-weight: 700
 @media (max-width: 768px)
-  .p-page-mv__entry
+  .p-common__entry
     font-size: rem(18)
+
