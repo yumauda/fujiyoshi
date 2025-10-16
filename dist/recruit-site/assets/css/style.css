@@ -4738,7 +4738,7 @@ body {
   display: block;
   font-size: 28px;
   font-weight: bold;
-  color: #333;
+  color: #000;
   line-height: 1.6;
 }
 .p-about-section .mt40 {
@@ -5380,6 +5380,8 @@ body {
 .p-about-future {
   padding-bottom: 5rem;
   background: #fff;
+  position: relative;
+  z-index: 3;
 }
 .p-about-future__inner {
   max-width: 65rem;
