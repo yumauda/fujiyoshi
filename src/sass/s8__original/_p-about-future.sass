@@ -29,7 +29,7 @@ body
 
     &-main
       display: block
-      font-size: rem(28)
+      font-size: rem(32)
       font-weight: bold
       color: #333
       line-height: 1.6
@@ -43,74 +43,6 @@ body
   .mt40
     margin-top: rem(40)
 
-// About Future (ともに水と環境の未来を)
-.p-about-future
-  padding-bottom: rem(80)
-  background: #fff
-
-  &__inner
-    max-width: rem(1040)
-    margin: 0 auto
-
-  &__title
-
-    &-star
-      display: block
-      color: #4a90e2
-      font-size: 14px
-      letter-spacing: 8px
-      margin-bottom: 10px
-
-    &-main
-      display: block
-      font-size: rem(28)
-      font-weight: bold
-      color: #333
-      line-height: 1.6
-
-  &__text
-    font-size: rem(16)
-    line-height: 2
-    color: #000
-    margin-bottom: rem(20)
-    text-align: justify
-  .mt40
-    margin-top: rem(40)
-
-.p-about-section__dot--blue,
-.p-about-section__dot--orange
-  position: relative
-
-.p-about-section__dot--blue::before
-  position: absolute
-  content: ''
-  width: rem(10)
-  height: rem(10)
-  background: #26CEA2
-  border-radius: 9999px
-  left: 50%
-  transform: translateX(-50%)
-  top: rem(-13)
-
-.p-about-section__dot--orange::before
-  position: absolute
-  content: ''
-  width: rem(10)
-  height: rem(10)
-  background: #E6D25F
-  border-radius: 9999px
-  left: 50%
-  transform: translateX(-50%)
-  top: rem(-13)
-@media (max-width: 768px)
-  .p-about-section__dot--orange::before
-    top: rem(-10)
-    width: rem(6)
-    height: rem(6)
-  .p-about-section__dot--blue::before
-    top: rem(-10)
-    width: rem(6)
-    height: rem(6)
 // Responsive
 @media (max-width: 768px)
   .p-about-section,
