@@ -338,24 +338,3 @@ body
   @media (max-width: 768px)
     display: block
 
-.p-about-card__icon
-  width: rem(36)
-  display: inline-block
-@media (max-width: 768px)
-  .p-about-card__icon
-    width: rem(24)
-.p-bg--environment
-  position: relative
-  z-index: 2
-
-.p-bg--environment::before
-  position: absolute
-  z-index: -1
-  content: ""
-  top: rem(-800)
-  left: 0px
-  width: 100vw
-  height: 200vh
-  background: linear-gradient(0deg, rgb(255, 255, 255) 45%, rgba(255, 255, 255, 0) 100%)
-  @media (max-width: 768px)
-    height: 400vh
