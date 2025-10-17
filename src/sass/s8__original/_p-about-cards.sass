@@ -10,7 +10,7 @@ body
 // ====================================
 
 // About Cards (下部カードセクション)
-.p-about-cards
+.p-common-cards
   padding-top: rem(80)
   padding-bottom: rem(80)
   position: relative
@@ -32,7 +32,7 @@ body
     padding-right: initial
     gap: rem(20)
 
-.p-about-card
+.p-common-card
   display: flex
   justify-content: center
   align-items: center
@@ -81,11 +81,13 @@ body
     text-align: center
     position: relative
 
-.p-about-card--work
+.p-common-card--work
   background: url(../../assets/img/top/bottom_2.png)
   background-size: cover
+  @media (max-width: 768px)
+    background-position: 20% 60%
 
-.p-about-card--company
+.p-common-card--company
   background: url(../../assets/img/job_all/bottom_3.png)
   background-size: cover
 
@@ -147,20 +149,20 @@ body
       flex-direction: column
       gap: rem(15)
 
-  .p-about-cards__inner
+  .p-common-cards__inner
     grid-template-columns: 1fr
     gap: rem(30)
 
-  .p-about-card__title
+  .p-common-card__title
     font-size: rem(18)
 .sp-only
   display: none
   @media (max-width: 768px)
     display: block
 
-.p-about-card__icon
+.p-common-card__icon
   width: rem(36)
   display: inline-block
 @media (max-width: 768px)
-  .p-about-card__icon
+  .p-common-card__icon
     width: rem(24)

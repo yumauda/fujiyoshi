@@ -4451,7 +4451,7 @@ br.u-br--pc {
   .p-triple__link--work {
     background: url(../../assets/img/top/bottom_2.png);
     background-size: cover;
-    background-position: 20% 6%;
+    background-position: 20% 60%;
     background-repeat: no-repeat;
   }
 }
@@ -5494,7 +5494,7 @@ body {
   overflow-x: clip;
 }
 
-.p-about-cards {
+.p-common-cards {
   padding-top: 5rem;
   padding-bottom: 5rem;
   position: relative;
@@ -5502,7 +5502,7 @@ body {
   margin-bottom: 6.25rem;
   background: #E4F1FA;
 }
-.p-about-cards__inner {
+.p-common-cards__inner {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2.5rem;
@@ -5512,14 +5512,14 @@ body {
   margin-inline: auto;
 }
 @media (max-width: 768px) {
-  .p-about-cards {
+  .p-common-cards {
     padding-left: initial;
     padding-right: initial;
     gap: 1.25rem;
   }
 }
 
-.p-about-card {
+.p-common-card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -5534,37 +5534,37 @@ body {
   border-radius: 1.875rem;
 }
 @media (max-width: 768px) {
-  .p-about-card {
+  .p-common-card {
     height: 8.75rem;
     gap: 0.75rem;
     border-radius: 1.25rem;
   }
 }
-.p-about-card__icon svg {
+.p-common-card__icon svg {
   width: 100%;
   height: auto;
   object-fit: cover;
   object-position: center center;
 }
-.p-about-card:hover {
+.p-common-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
-.p-about-card__img {
+.p-common-card__img {
   width: 100%;
   aspect-ratio: 16/9;
   overflow: hidden;
 }
-.p-about-card__img img {
+.p-common-card__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
-.p-about-card:hover .p-about-card__img img {
+.p-common-card:hover .p-common-card__img img {
   transform: scale(1.05);
 }
-.p-about-card__title {
+.p-common-card__title {
   font-size: 1.625rem;
   line-height: 1.2;
   color: #fff;
@@ -5572,12 +5572,17 @@ body {
   position: relative;
 }
 
-.p-about-card--work {
+.p-common-card--work {
   background: url(../../assets/img/top/bottom_2.png);
   background-size: cover;
 }
+@media (max-width: 768px) {
+  .p-common-card--work {
+    background-position: 20% 60%;
+  }
+}
 
-.p-about-card--company {
+.p-common-card--company {
   background: url(../../assets/img/job_all/bottom_3.png);
   background-size: cover;
 }
@@ -5643,11 +5648,11 @@ body {
     flex-direction: column;
     gap: 0.9375rem;
   }
-  .p-about-cards__inner {
+  .p-common-cards__inner {
     grid-template-columns: 1fr;
     gap: 1.875rem;
   }
-  .p-about-card__title {
+  .p-common-card__title {
     font-size: 1.125rem;
   }
 }
@@ -5660,13 +5665,13 @@ body {
   }
 }
 
-.p-about-card__icon {
+.p-common-card__icon {
   width: 2.25rem;
   display: inline-block;
 }
 
 @media (max-width: 768px) {
-  .p-about-card__icon {
+  .p-common-card__icon {
     width: 1.5rem;
   }
 }
