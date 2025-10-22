@@ -4661,7 +4661,7 @@ br.u-br--pc {
   letter-spacing: 0.065em;
   position: relative;
   padding-left: 1.25rem;
-  padding-top: 0.5rem;
+  padding-top: 0.875rem;
 }
 @media (max-width: 768px) {
   .p-qa__txt {
@@ -5221,6 +5221,7 @@ body {
   height: auto;
   object-fit: cover;
   object-position: center center;
+  border-radius: 1.25rem;
 }
 @media (max-width: 768px) {
   .p-about-expertise__img img {
