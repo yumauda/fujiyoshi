@@ -109,8 +109,16 @@
     color: #000
     font-weight: 500
 
+// 上付き文字（うわつき）
+.p-single__text span
+    vertical-align: super
+    font-size: 0.6em
+    line-height: 1
+
 @media (max-width: 768px)
-    .p-single__text
+    .p-single__text span
+        font-size: 0.55em
+
 
 .p-single__text + .p-single__text
     margin-top: rem(40)
